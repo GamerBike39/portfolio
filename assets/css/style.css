@@ -170,3 +170,8 @@ a{
       line-height: 1.4;
       margin-bottom: 5px;
   }
+
+  .modal a{
+    transform: translateY(25px);
+    color: black;
+  }
