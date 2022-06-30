@@ -52,8 +52,8 @@ a{
     display: flex;
     flex-direction: column;
     width: 95vw;
-    font-size: 12rem;
-    
+    font-size: 13rem;
+    transform: translateY(-50px);  
 }
 
 .containerProject > h3:nth-child(1){
@@ -61,7 +61,7 @@ a{
     margin-top: 0;
     margin-bottom: 0;
     margin-left: auto;
-    transform: scaleX(1) scaleY(1) scaleZ(1.6) rotateX(27deg) rotateY(40deg) rotateZ(1deg) translateX(57px) translateY(119px) translateZ(0px) skewX(0deg) skewY(0deg);
+    transform: scaleX(1) scaleY(1) scaleZ(1.6) rotateX(338deg) rotateY(40deg) rotateZ(1deg) translateX(57px) translateY(139px) translateZ(0px) skewX(0deg) skewY(0deg);
     transform-style: preserve-3d;
     transition: all 0.5s ease-in-out;
 }
@@ -70,7 +70,7 @@ a{
     margin-top: 0;
     margin-bottom: 0;
     margin-left: auto;
-    transform: scaleX(1) scaleY(1) scaleZ(1.6) rotateX(27deg) rotateY(40deg) rotateZ(1deg) translateX(57px) translateY(77px) translateZ(0px) skewX(0deg) skewY(0deg);
+    transform: scaleX(1) scaleY(1) scaleZ(1.6) rotateX(338deg) rotateY(40deg) rotateZ(1deg) translateX(-15px) translateY(77px) translateZ(0px) skewX(0deg) skewY(0deg);
     transform-style: preserve-3d;
     transition: all 0.5s ease-in-out;
 }
@@ -79,15 +79,17 @@ a{
     margin-top: 0;
     margin-bottom: 0;
     margin-left: auto;
-    transform: scaleX(1) scaleY(1) scaleZ(1.6) rotateX(27deg) rotateY(40deg) rotateZ(1deg) translateX(57px) translateY(-8px) translateZ(0px) skewX(0deg) skewY(0deg);
+    transform: scaleX(1) scaleY(1) scaleZ(1.6) rotateX(338deg) rotateY(40deg) rotateZ(1deg) translateX(57px) translateY(13px) translateZ(0px) skewX(0deg) skewY(0deg);
     transform-style: preserve-3d;
     transition: all 0.5s ease-in-out;
 }
 
 .containerProject > h3:hover{
-    transform-origin: 0% 50%;
-    transform: skewY(2deg);
+    transform-origin: 50% 50%;
+    transform: skewY(0deg) translateY(10px);
     transform-style: preserve-3d;
 }
 
+
+/* ********* gestion de la modale******** */
 
