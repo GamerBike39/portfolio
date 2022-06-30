@@ -33,7 +33,18 @@ projetThree.addEventListener("mouseleave", function () {
 });
 
 // ******* click event *******
-projetOne.addEventListener("click", function () {
-  projetOne.style.color = "red";
-  // faire ouvrir une modale qui invite sur une page plus complète
-});
+// projetOne.addEventListener("click", function () {
+//   projetOne.style.color = "red";
+//   // faire ouvrir une modale qui invite sur une page plus complète
+// });
+
+const modalContainer = document.querySelector(".modal-container");
+const modalTriggers = document.querySelectorAll(".modal-trigger");
+
+modalTriggers.forEach((trigger) =>
+  trigger.addEventListener("click", toggleModal)
+);
+
+function toggleModal() {
+  modalContainer.classList.toggle("active");
+}
