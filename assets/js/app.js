@@ -47,6 +47,8 @@ const closeModaleCrea = document.querySelector(".closeCrea");
 btnPop.addEventListener("click", function () {
   modalPop.classList.toggle("flex");
   modalPop.classList.toggle("displayNone");
+  modalCrea.classList.add("displayNone");
+  modalAllo.classList.add("displayNone");
 });
 closeModalePop.addEventListener("click", function () {
   modalPop.classList.toggle("flex");
@@ -63,8 +65,12 @@ closeModaleCrea.addEventListener("click", function () {
 btnAllo.addEventListener("click", function () {
   modalAllo.classList.toggle("flex");
   modalAllo.classList.toggle("displayNone");
+  modalPop.classList.add("displayNone");
+  modalCrea.classList.add("displayNone");
 });
 btnCrea.addEventListener("click", function () {
   modalCrea.classList.toggle("flex");
   modalCrea.classList.toggle("displayNone");
+  modalPop.classList.add("displayNone");
+  modalAllo.classList.add("displayNone");
 });
