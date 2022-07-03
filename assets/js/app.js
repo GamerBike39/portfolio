@@ -44,11 +44,13 @@ const closeModalePop = document.querySelector(".closePop");
 const closeModaleAllo = document.querySelector(".closeAllo");
 const closeModaleCrea = document.querySelector(".closeCrea");
 
-btnPop.addEventListener("click", function () {
+btnPop.addEventListener("click", () => {
   modalPop.classList.toggle("flex");
   modalPop.classList.toggle("displayNone");
   modalCrea.classList.add("displayNone");
   modalAllo.classList.add("displayNone");
+  modalCrea.classList.remove("flex");
+  modalAllo.classList.remove("flex");
 });
 closeModalePop.addEventListener("click", function () {
   modalPop.classList.toggle("flex");
@@ -67,10 +69,14 @@ btnAllo.addEventListener("click", function () {
   modalAllo.classList.toggle("displayNone");
   modalPop.classList.add("displayNone");
   modalCrea.classList.add("displayNone");
+  modalPop.classList.remove("flex");
+  modalCrea.classList.remove("flex");
 });
 btnCrea.addEventListener("click", function () {
   modalCrea.classList.toggle("flex");
   modalCrea.classList.toggle("displayNone");
   modalPop.classList.add("displayNone");
   modalAllo.classList.add("displayNone");
+  modalPop.classList.remove("flex");
+  modalAllo.classList.remove("flex");
 });
