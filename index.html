@@ -11,6 +11,8 @@
         href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100;8..144,200;8..144,300;8..144,400;8..144,500;8..144,600;8..144,700;8..144,800;8..144,900;8..144,1000&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <title>Portfolio</title>
 </head>
 
@@ -62,14 +64,20 @@
         <div class="modalPop flex">
             <button class="close-modal closePop">❌</button>
             <h4><strong>POPCODE</strong></h4>
-            <span class="btn-modal-left">⬅️</span>
-            <span class="btn-modal-right">➡️</span>
-            <img class="firstScreen" src="assets/img/popcodeScreen.png" alt="capture d'écran de la page d'accueil du site"> 
-            <img class="twoScreen displayNone" src="assets/img/popcodeJeu.png" alt="aperçu de l'écran de jeu"> 
-            <img class="threeScreen displayNone" src="assets/img/popcodeJeu.png" alt="capture d'écran de la page d'accueil du site"> 
+
+            <div class="my-sliderPop">
+                <img src="assets/img/popcodeScreen.png" alt="capture d'écran de la page d'accueil du site">
+                <img src="assets/img/popcodeScreen.png" alt="capture d'écran de la page d'accueil du site">
+                <img src="assets/img/popcodeJeu.png" alt="aperçu de l'écran de jeu">
+                <img src="assets/img/popcodeJeu.png" alt="capture d'écran de la page d'accueil du site">
+            </div>
+            
             <p>Projet réalisé durant ma formation Access Code School.</p>
-            <p>PopCode est inspiré du site PopCornTV ou le but est de chercher et retrouver les références de différents langages de programmation cachés dans une illustration.</p>
-            <p>Ce projet m'a permis de perfectionner mon utilisation de Javascript avec l'implémentation de différentes fonctions, telles que la prise en charge des bonnes et mauvaises réponses, ainsi qu'une fonction zoom pour mieux visualiser les éléments</p>
+            <p>PopCode est inspiré du site PopCornTV ou le but est de chercher et retrouver les références de différents
+                langages de programmation cachés dans une illustration.</p>
+            <p>Ce projet m'a permis de perfectionner mon utilisation de Javascript avec l'implémentation de différentes
+                fonctions, telles que la prise en charge des bonnes et mauvaises réponses, ainsi qu'une fonction zoom
+                pour mieux visualiser les éléments</p>
             <a href="#">En savoir plus</a>
         </div>
     </div>
@@ -79,27 +87,33 @@
         <div class="modalAllo flex">
             <button class="close-modal closeAllo">❌</button>
             <h4><strong>ALLOJYVÉ</strong></h4>
-            <span class="btn-modal-left">⬅️</span>
-            <span class="btn-modal-right">➡️</span>
-            <img class="firstScreen" src="assets/img/allojyve-accueil.jpg" alt="capture d'écran de la page d'accueil du site"> 
-            <img class="twoScreen displayNone" src="assets/img/allojyve-modal.jpg" alt="aperçu de l'écran de jeu"> 
+
+            <div class="my-sliderAllo">
+                <img src="assets/img/allojyve-accueil.jpg" alt="capture d'écran de la page d'accueil du site">
+                <img src="assets/img/allojyve-modal.jpg" alt="aperçu de l'écran de jeu">
+                <img src="assets/img/allojyve-modal.jpg" alt="aperçu de l'écran de jeu">
+                <img src="assets/img/allojyve-modal.jpg" alt="aperçu de l'écran de jeu">
+            </div>
+
             <p>Projet réalisé durant ma formation Access Code School.</p>
-            <p>Allojyvé est un projet qui a comme fonction d'utilisé l'API de The Movie Database, pour faire un suivie des sorties populaires, à venir, et en cours.</p>
+            <p>Allojyvé est un projet qui a comme fonction d'utilisé l'API de The Movie Database, pour faire un suivie
+                des sorties populaires, à venir, et en cours.</p>
             <p>La contrainte de ce projet était de ne pas utiliser d'HTML et de tout générer avec Javascript</p>
             <a href="#">En savoir plus</a>
         </div>
     </div>
+
     <div class="modal modalCrea displayNone">
         <div class="overlay modal-trigger"></div>
         <div class="modalCrea flex">
             <button class="close-modal closeCrea">❌</button>
             <h4><strong>Creative</strong></h4>
-            <span class="btn-modal-left">⬅️</span>
-            <span class="btn-modal-right">➡️</span>
-            <img class="firstScreen" src="assets/img/allojyve-accueil.jpg" alt="capture d'écran de la page d'accueil du site"> 
-            <img class="twoScreen displayNone" src="assets/img/allojyve-modal.jpg" alt="aperçu de l'écran de jeu"> 
+            <img class="firstScreen" src="assets/img/allojyve-accueil.jpg"
+                alt="capture d'écran de la page d'accueil du site">
+            <img class="twoScreen displayNone" src="assets/img/allojyve-modal.jpg" alt="aperçu de l'écran de jeu">
             <p>Projet réalisé durant ma formation Access Code School.</p>
-            <p>Allojyvé est un projet qui a comme fonction d'utilisé l'API de The Movie Database, pour faire un suivie des sorties populaires, à venir, et en cours.</p>
+            <p>Allojyvé est un projet qui a comme fonction d'utilisé l'API de The Movie Database, pour faire un suivie
+                des sorties populaires, à venir, et en cours.</p>
             <p>La contrainte de ce projet était de ne pas utiliser d'HTML et de tout générer avec Javascript</p>
             <a href="#">En savoir plus</a>
         </div>
@@ -108,7 +122,7 @@
 
 
 
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
     <script src="assets/js/app.js"></script>
 </body>
 

@@ -80,3 +80,26 @@ btnCrea.addEventListener("click", function () {
   modalPop.classList.remove("flex");
   modalAllo.classList.remove("flex");
 });
+
+var slider = tns({
+  container: ".my-sliderPop",
+  items: 1.1,
+  gutter: 10,
+  mouseDrag: true,
+  edgePadding: 50,
+  swipeAngle: false,
+  speed: 400,
+  controlsText: ["⬅️", "➡️"],
+  controlsPosition: "bottom",
+});
+var slider = tns({
+  container: ".my-sliderAllo",
+  items: 1.1,
+  gutter: 10,
+  mouseDrag: true,
+  edgePadding: 50,
+  swipeAngle: false,
+  speed: 400,
+  controlsText: ["⬅️", "➡️"],
+  controlsPosition: "bottom",
+});
