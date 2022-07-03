@@ -32,13 +32,39 @@ projetThree.addEventListener("mouseleave", function () {
   projetTwo.classList.remove("opac");
 });
 
-const modalContainer = document.querySelector(".modal-container");
-const modalTriggers = document.querySelectorAll(".modal-trigger");
+// ****modale****
 
-modalTriggers.forEach((trigger) =>
-  trigger.addEventListener("click", toggleModal)
-);
+const btnPop = document.querySelector(".btn-modalPop");
+const btnAllo = document.querySelector(".btn-modalAllo");
+const btnCrea = document.querySelector(".btn-modalCrea");
+const modalPop = document.querySelector(".modalPop");
+const modalAllo = document.querySelector(".modalAllo");
+const modalCrea = document.querySelector(".modalCrea");
+const closeModalePop = document.querySelector(".closePop");
+const closeModaleAllo = document.querySelector(".closeAllo");
+const closeModaleCrea = document.querySelector(".closeCrea");
 
-function toggleModal() {
-  modalContainer.classList.toggle("active");
-}
+btnPop.addEventListener("click", function () {
+  modalPop.classList.toggle("flex");
+  modalPop.classList.toggle("displayNone");
+});
+closeModalePop.addEventListener("click", function () {
+  modalPop.classList.toggle("flex");
+  modalPop.classList.toggle("displayNone");
+});
+closeModaleAllo.addEventListener("click", function () {
+  modalAllo.classList.toggle("flex");
+  modalAllo.classList.toggle("displayNone");
+});
+closeModaleCrea.addEventListener("click", function () {
+  modalCrea.classList.toggle("flex");
+  modalCrea.classList.toggle("displayNone");
+});
+btnAllo.addEventListener("click", function () {
+  modalAllo.classList.toggle("flex");
+  modalAllo.classList.toggle("displayNone");
+});
+btnCrea.addEventListener("click", function () {
+  modalCrea.classList.toggle("flex");
+  modalCrea.classList.toggle("displayNone");
+});
