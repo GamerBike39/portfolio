@@ -165,6 +165,7 @@ var slider = tns({
   controlsPosition: "bottom",
 });
 
+//**** */ effets 3d ****
 var ztxt = new Ztextify(".name", {
   depth: "3px",
   layers: 8,
