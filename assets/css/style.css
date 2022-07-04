@@ -55,44 +55,121 @@ a{
 .containerProject{
     display: flex;
     flex-direction: column;
-    width: 95vw;
-    font-size: 10rem;
+    width: 95%;
+    font-size: 9rem;
+    transform: translateY(70px);
+    font-family: "Druk Wide Web Bold Regular";
+    font-weight: 800;
+    perspective: 800px;
+      }
 
-}
 
 .containerProject > h3:nth-child(1){
-    font-family: 'Roboto Flex', sans-serif;
     margin-top: 0;
     margin-bottom: 0;
     margin-left: auto;
-    transform: scaleX(1) scaleY(1) scaleZ(1.6) rotateX(338deg) rotateY(40deg) rotateZ(1deg) translateX(57px) translateY(139px) translateZ(0px) skewX(0deg) skewY(0deg);
+    transform: rotateX(3deg) rotateY(326deg) translateY(40px);
     transform-style: preserve-3d;
     transition: all 0.5s ease-in-out;
+    transform-origin: center right;
+    cursor: pointer;
+    position: relative;
 }
 .containerProject > h3:nth-child(2){
-    font-family: 'Roboto Flex', sans-serif;
+
     margin-top: 0;
     margin-bottom: 0;
     margin-left: auto;
-    transform: scaleX(1) scaleY(1) scaleZ(1.6) rotateX(338deg) rotateY(40deg) rotateZ(1deg) translateX(-15px) translateY(77px) translateZ(0px) skewX(0deg) skewY(0deg);
+    transform: rotateX(3deg) rotateY(326deg) translate(12px,18px);
     transform-style: preserve-3d;
     transition: all 0.5s ease-in-out;
+    transform-origin: center right;
+    cursor: pointer;
+    position: relative;
 }
 .containerProject > h3:nth-child(3){
-    font-family: 'Roboto Flex', sans-serif;
+
     margin-top: 0;
     margin-bottom: 0;
     margin-left: auto;
-    transform: scaleX(1) scaleY(1) scaleZ(1.6) rotateX(338deg) rotateY(40deg) rotateZ(1deg) translateX(57px) translateY(13px) translateZ(0px) skewX(0deg) skewY(0deg);
+    transform: rotateX(3deg) rotateY(326deg) translateX(-140px);
     transform-style: preserve-3d;
     transition: all 0.5s ease-in-out;
+    transform-origin:center right;
+    cursor: pointer;
+    position: relative;
+}
+.containerProject > h3:nth-child(4){
+
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: auto;
+    transform: rotateX(3deg) rotateY(326deg) translateX(15px) translateY(-26px);
+    transform-style: preserve-3d;
+    transition: all 0.5s ease-in-out;
+    transform-origin:center right;
+    cursor: pointer;
+    position: relative;
 }
 
 .containerProject > h3:hover{
-    transform-origin: 50% 50%;
-    transform: skewY(0deg) translateY(10px);
+    transform: rotateX(3deg) rotateY(330deg);
     transform-style: preserve-3d;
+    -webkit-text-stroke: 0px;
 }
+
+.containerProject > h3:nth-child(1)::after,
+.containerProject > h3:nth-child(2)::after,
+.containerProject > h3:nth-child(3)::after,
+.containerProject > h3:nth-child(4)::after{
+    content: "/";
+    position: absolute;
+    left: -50px;
+    top: -30px;
+    font-weight: lighter;
+    font-family: "roboto flex", sans-serif;
+}
+
+.containerProject > h3:nth-child(1)::before{
+    content: "01";
+    position: absolute;
+    left: -80px;
+    top: -7px;
+    font-weight: lighter;
+    font-family: "roboto flex", sans-serif;
+    font-size: 2.5rem;
+}
+.containerProject > h3:nth-child(2)::before{
+    content: "02";
+    position: absolute;
+    left: -80px;
+    top: -7px;
+    font-weight: lighter;
+    font-family: "roboto flex", sans-serif;
+    font-size: 2.5rem;
+}
+.containerProject > h3:nth-child(3)::before{
+    content: "03";
+    position: absolute;
+    left: -80px;
+    top: -7px;
+    font-weight: lighter;
+    font-family: "roboto flex", sans-serif;
+    font-size: 2.5rem;
+}
+.containerProject > h3:nth-child(4)::before{
+    content: "04";
+    position: absolute;
+    left: -80px;
+    top: -7px;
+    font-weight: lighter;
+    font-family: "roboto flex", sans-serif;
+    font-size: 2.5rem;
+}
+
+
+
+
 
 
 /* ********* gestion de la modale******** */
@@ -129,6 +206,7 @@ a{
       margin-bottom: 10px;
       font-weight: 500;
     margin-left: 20px;
+    font-size: 3rem;
   }
 
   .modal p{
@@ -145,13 +223,16 @@ a{
     border-bottom: 2px solid black;
   }
 
-  .modalPop,.modalAllo,.modalCrea{
+  .modalPop,.modalAllo,.modalCrea,.modalBoots{
       flex-direction: column;
     align-items: center;
-    justify-content: center;
+    /* justify-content: center; */
   }
 
-  .modalPop > img, .modalAllo > img, .modalCrea > img{
+  .modalPop > img, .modalAllo > img, .modalCrea > img, .modalBoots > img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     width: 90%;
   }
 /* bouton modal caroussel */
@@ -198,5 +279,5 @@ a{
         position: absolute;
         left: 50%;
     }
-/* ****************************** */
-/* ************* screen caroussel ************ */
+
+
