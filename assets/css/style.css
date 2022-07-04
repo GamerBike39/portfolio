@@ -5,6 +5,9 @@
 .flex{
     display: flex;
 }
+.flex2{
+    display: flex;
+}
 .opac{
     opacity: 0;
 }

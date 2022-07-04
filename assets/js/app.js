@@ -89,6 +89,11 @@ btnPop.addEventListener("click", () => {
   modalAllo.classList.remove("flex");
   modalBoots.classList.add("displayNone");
   modalBoots.classList.remove("flex");
+  if (modalPop.classList.contains("flex") === true) {
+    console.log("ok  flex");
+  } else {
+    console.log("ok ");
+  }
 });
 
 btnAllo.addEventListener("click", function () {
@@ -172,3 +177,7 @@ var ztxt = new Ztextify(".name", {
   event: "pointer",
   eventRotation: "45deg",
 });
+
+// **************************
+
+// console.log(modalPop.classList.contains("flex"));
