@@ -62,22 +62,27 @@ const closeModalePop = document.querySelector(".closePop");
 const closeModaleAllo = document.querySelector(".closeAllo");
 const closeModaleCrea = document.querySelector(".closeCrea");
 const closeModaleBoots = document.querySelector(".closeBoots");
+const containerProject = document.querySelector(".containerProject");
 
 closeModalePop.addEventListener("click", function () {
   modalPop.classList.toggle("flex");
   modalPop.classList.toggle("displayNone");
+  containerProject.classList.remove("scaleTranslate");
 });
 closeModaleAllo.addEventListener("click", function () {
   modalAllo.classList.toggle("flex");
   modalAllo.classList.toggle("displayNone");
+  containerProject.classList.remove("scaleTranslate");
 });
 closeModaleCrea.addEventListener("click", function () {
   modalCrea.classList.toggle("flex");
   modalCrea.classList.toggle("displayNone");
+  containerProject.classList.remove("scaleTranslate");
 });
 closeModaleBoots.addEventListener("click", function () {
   modalBoots.classList.toggle("flex");
   modalBoots.classList.toggle("displayNone");
+  containerProject.classList.remove("scaleTranslate");
 });
 
 btnPop.addEventListener("click", () => {
@@ -90,9 +95,9 @@ btnPop.addEventListener("click", () => {
   modalBoots.classList.add("displayNone");
   modalBoots.classList.remove("flex");
   if (modalPop.classList.contains("flex") === true) {
-    console.log("ok  flex");
+    containerProject.classList.add("scaleTranslate");
   } else {
-    console.log("ok ");
+    containerProject.classList.remove("scaleTranslate");
   }
 });
 
@@ -105,6 +110,11 @@ btnAllo.addEventListener("click", function () {
   modalCrea.classList.remove("flex");
   modalBoots.classList.add("displayNone");
   modalBoots.classList.remove("flex");
+  if (modalAllo.classList.contains("flex") === true) {
+    containerProject.classList.add("scaleTranslate");
+  } else {
+    containerProject.classList.remove("scaleTranslate");
+  }
 });
 btnCrea.addEventListener("click", function () {
   modalCrea.classList.toggle("flex");
@@ -115,6 +125,11 @@ btnCrea.addEventListener("click", function () {
   modalAllo.classList.remove("flex");
   modalBoots.classList.add("displayNone");
   modalBoots.classList.remove("flex");
+  if (modalCrea.classList.contains("flex") === true) {
+    containerProject.classList.add("scaleTranslate");
+  } else {
+    containerProject.classList.remove("scaleTranslate");
+  }
 });
 btnBoots.addEventListener("click", function () {
   modalAllo.classList.remove("flex");
@@ -125,6 +140,11 @@ btnBoots.addEventListener("click", function () {
   modalCrea.classList.remove("flex");
   modalBoots.classList.toggle("flex");
   modalBoots.classList.toggle("displayNone");
+  if (modalBoots.classList.contains("flex") === true) {
+    containerProject.classList.add("scaleTranslate");
+  } else {
+    containerProject.classList.remove("scaleTranslate");
+  }
 });
 
 // ****** sliders*******

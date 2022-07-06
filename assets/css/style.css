@@ -14,6 +14,9 @@
 .displayNone{
     display: none;
 }
+.scaleTranslate{
+    transform : scale(0.6) translateX(35rem);
+}
 /* ********************************* */
 body{
     margin: 0;
@@ -60,7 +63,6 @@ a{
     flex-direction: column;
     width: 95%;
     font-size: 9rem;
-    transform: translateY(70px);
     font-family: "Druk Wide Web Bold Regular";
     font-weight: 800;
     perspective: 800px;
