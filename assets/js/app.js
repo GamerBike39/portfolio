@@ -168,6 +168,7 @@ var slider = tns({
   speed: 400,
   controlsText: ["⬅️", "➡️"],
   controlsPosition: "bottom",
+  loop: true,
 });
 var slider = tns({
   container: ".my-sliderCreat",
@@ -178,6 +179,7 @@ var slider = tns({
   speed: 400,
   controlsText: ["⬅️", "➡️"],
   controlsPosition: "bottom",
+  loop: true,
 });
 var slider = tns({
   container: ".my-sliderBoots",
@@ -188,6 +190,7 @@ var slider = tns({
   speed: 400,
   controlsText: ["⬅️", "➡️"],
   controlsPosition: "bottom",
+  loop: true,
 });
 
 //**** */ effets 3d ****
@@ -199,5 +202,3 @@ var ztxt = new Ztextify(".name", {
 });
 
 // **************************
-
-// console.log(modalPop.classList.contains("flex"));

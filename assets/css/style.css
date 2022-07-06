@@ -9,8 +9,10 @@
     display: flex;
 }
 .opac{
-    opacity: 0;
+    opacity: 0.3;
+    transition: all 0.3s ease-in-out;
 }
+  
 .displayNone{
     display: none;
 }
@@ -67,6 +69,7 @@ a{
     font-weight: 800;
     perspective: 800px;
     color: #FFDEB8;
+    margin-top: 20px;
       }
 
 
@@ -74,18 +77,19 @@ a{
     margin-top: 0;
     margin-bottom: 0;
     margin-left: auto;
-    transform: rotateX(3deg) rotateY(326deg) translateY(40px);
+    transform: rotateX(3deg) rotateY(326deg) translateY(30px);
     transform-style: preserve-3d;
     transition: all 0.5s ease-in-out;
     transform-origin: center right;
     cursor: pointer;
     position: relative;
     -webkit-text-stroke: 5px;
+    margin-bottom: 10px;
 }
 .containerProject > h3:nth-child(2){
 
-    margin-top: 0;
-    margin-bottom: 0;
+    margin-top: 5px;
+    margin-bottom: 5px;
     margin-left: auto;
     transform: rotateX(3deg) rotateY(326deg) translate(12px,18px);
     transform-style: preserve-3d;
@@ -97,8 +101,8 @@ a{
 }
 .containerProject > h3:nth-child(3){
 
-    margin-top: 0;
-    margin-bottom: 0;
+    margin-top: 5px;
+    margin-bottom: 5px;
     margin-left: auto;
     transform: rotateX(3deg) rotateY(326deg) translateX(36px);
     transform-style: preserve-3d;
@@ -110,8 +114,8 @@ a{
 }
 .containerProject > h3:nth-child(4){
 
-    margin-top: 0;
-    margin-bottom: 0;
+    margin-top: 5px;
+    margin-bottom: 5px;
     margin-left: auto;
     transform: rotateX(3deg) rotateY(326deg) translateX(15px) translateY(-26px);
     transform-style: preserve-3d;
@@ -123,9 +127,11 @@ a{
 }
 
 .containerProject > h3:hover{
-    /* transform: rotateX(3deg) rotateY(330deg);
-    transform-style: preserve-3d; */
-    -webkit-text-stroke: transparent;
+    transform: rotateX(3deg) rotateY(326deg) translateX(15px) translateY(-26px) scale(1.1);
+    transform-style: preserve-3d;
+    transition: all 0.5s ease-in-out;
+   margin-top: 20px;
+   margin-bottom: 20px;
 }
 
 .containerProject > h3:nth-child(1)::after,
@@ -183,10 +189,6 @@ a{
 }
 
 
-
-
-
-
 /* ********* gestion de la modale******** */
 
 .modal-btn{
@@ -236,6 +238,7 @@ a{
     margin-left: 20px;
     font-weight: bold;
     border-bottom: 2px solid black;
+    position: relative;
   }
 
   .modalPop,.modalAllo,.modalCrea,.modalBoots{
@@ -250,6 +253,37 @@ a{
       object-fit: cover;
     width: 90%;
   }
+
+/* ****bouton en savoir plus ****** */
+.learnMore::after{
+    content: ">";
+    position: absolute;
+    height: 25px;
+    width: 25px;
+    left: -28px;
+    top: -9px;
+    font-weight: lighter;
+    font-family: "roboto flex", sans-serif;
+    font-size: 2rem;
+    color: white;
+    border-radius: 50%;
+}
+.learnMore::before{
+    content: "";
+    position: absolute;
+    height: 25px;
+    width: 25px;
+    left: -35px;
+    top: -4px;
+    font-weight: lighter;
+    font-family: "roboto flex", sans-serif;
+    font-size: 2rem;
+    border: 2px solid black;
+    background: black;
+    color: white;
+    border-radius: 50%;
+}
+
 /* bouton modal caroussel */
   .btn-modal-left{
     position: absolute;
