@@ -75,7 +75,6 @@ a{
 
 .containerProject > h3:nth-child(1){
     margin-top: 0;
-    margin-bottom: 0;
     margin-left: auto;
     transform: rotateX(3deg) rotateY(326deg) translateY(30px);
     transform-style: preserve-3d;
@@ -330,3 +329,38 @@ a{
     }
 
 
+/* media querries */
+@media screen and (max-width: 768px){
+    .containerProject > h3{
+        font-size: 2rem;
+    }
+    .containerProject > h3:nth-child(1),.containerProject > h3:nth-child(2),.containerProject > h3:nth-child(3),.containerProject > h3:nth-child(4){
+        margin-left: 0;
+        -webkit-text-stroke: 0px;
+        margin-bottom: 0;
+    }
+    .containerProject > h3:nth-child(1){
+        transform: rotateX(3deg) rotateY(326deg) translateY(30px);
+    }
+    .containerProject > h3:nth-child(2){
+        transform: rotateX(3deg) rotateY(326deg) translateY(30px);
+    }
+    .containerProject > h3:nth-child(3){
+        transform: rotateX(3deg) rotateY(326deg) translateY(30px);
+    }
+    .containerProject > h3:nth-child(4){
+        transform: rotateX(3deg) rotateY(326deg) translateY(30px);
+    }
+.containerProject > h3:nth-child(1)::after,.containerProject > h3:nth-child(2)::after,.containerProject > h3:nth-child(3)::after,.containerProject > h3:nth-child(4)::after{
+    left: -19px;
+    top: -9px;
+}
+.containerProject > h3:nth-child(1)::before,.containerProject > h3:nth-child(2)::before,.containerProject > h3:nth-child(3)::before,.containerProject > h3:nth-child(4)::before{
+    left: -47px;
+    top: -2px;
+    font-size: 1rem;
+}
+.modal{
+    width: 100vw;
+}
+}
