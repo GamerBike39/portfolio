@@ -235,7 +235,7 @@ var ztxt = new Ztextify(".name", {
   depth: "3px",
   layers: 8,
   event: "pointer",
-  eventRotation: "45deg",
+  eventRotation: "5deg",
 });
 
 // **************************
