@@ -58,6 +58,7 @@ const modalPop = document.querySelector(".modalPop");
 const modalAllo = document.querySelector(".modalAllo");
 const modalCrea = document.querySelector(".modalCrea");
 const modalBoots = document.querySelector(".modalBoots");
+const allModal = document.querySelectorAll(".modal");
 const closeModalePop = document.querySelector(".closePop");
 const closeModaleAllo = document.querySelector(".closeAllo");
 const closeModaleCrea = document.querySelector(".closeCrea");
@@ -235,7 +236,42 @@ var ztxt = new Ztextify(".name", {
   depth: "3px",
   layers: 8,
   event: "pointer",
-  eventRotation: "5deg",
+  eventRotation: "10deg",
 });
 
-// **************************
+// *************** About ****************************
+
+let about = document.querySelector(".containerAbout");
+let btnAbout = document.querySelector(".btnAbout");
+let header = document.querySelector("header");
+let quiBtn = document.querySelector(".qui");
+let containerQui = document.querySelector(".containerQui");
+let skillBtn = document.querySelector(".skills");
+let containerSkill = document.querySelector(".containerSkills");
+
+btnAbout.addEventListener("click", function () {
+  about.classList.toggle("displayNone");
+  header.classList.remove("dekstopNav");
+  header.classList.toggle("popNav");
+  for (let i = 0; i < allModal.length; i++) {
+    allModal[i].classList.add("displayNone");
+    allModal[i].classList.remove("flex");
+    header.classList.add("popNav");
+  }
+});
+
+quiBtn.addEventListener("click", function () {
+  containerQui.classList.toggle("displayNone");
+  containerQui.classList.toggle("flex");
+  containerSkill.classList.add("displayNone");
+  header.classList.remove("popNav");
+  header.classList.add("dekstopNav");
+});
+
+skillBtn.addEventListener("click", function () {
+  containerSkill.classList.toggle("displayNone");
+  containerSkill.classList.toggle("flex");
+  containerQui.classList.add("displayNone");
+  header.classList.remove("popNav");
+  header.classList.add("dekstopNav");
+});
