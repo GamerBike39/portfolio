@@ -245,9 +245,11 @@ let about = document.querySelector(".containerAbout");
 let btnAbout = document.querySelector(".btnAbout");
 let header = document.querySelector("header");
 let quiBtn = document.querySelector(".qui");
-let containerQui = document.querySelector(".containerQui");
 let skillBtn = document.querySelector(".skills");
+let expBtn = document.querySelector(".exp");
+let containerQui = document.querySelector(".containerQui");
 let containerSkill = document.querySelector(".containerSkills");
+let containerExp = document.querySelector(".containerMyExp");
 
 btnAbout.addEventListener("click", function () {
   about.classList.toggle("displayNone");
@@ -264,6 +266,7 @@ quiBtn.addEventListener("click", function () {
   containerQui.classList.toggle("displayNone");
   containerQui.classList.toggle("flex");
   containerSkill.classList.add("displayNone");
+  containerExp.classList.add("displayNone");
   header.classList.remove("popNav");
   header.classList.add("dekstopNav");
 });
@@ -271,6 +274,15 @@ quiBtn.addEventListener("click", function () {
 skillBtn.addEventListener("click", function () {
   containerSkill.classList.toggle("displayNone");
   containerSkill.classList.toggle("flex");
+  containerQui.classList.add("displayNone");
+  header.classList.remove("popNav");
+  header.classList.add("dekstopNav");
+});
+
+expBtn.addEventListener("click", function () {
+  containerExp.classList.toggle("displayNone");
+  containerExp.classList.toggle("flex");
+  containerSkill.classList.add("displayNone");
   containerQui.classList.add("displayNone");
   header.classList.remove("popNav");
   header.classList.add("dekstopNav");
