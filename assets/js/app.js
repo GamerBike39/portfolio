@@ -275,6 +275,7 @@ skillBtn.addEventListener("click", function () {
   containerSkill.classList.toggle("displayNone");
   containerSkill.classList.toggle("flex");
   containerQui.classList.add("displayNone");
+  containerExp.classList.add("displayNone");
   header.classList.remove("popNav");
   header.classList.add("dekstopNav");
 });

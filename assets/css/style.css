@@ -360,6 +360,7 @@ a{
     font-size: 2vw;
     text-align: left;
     color: #ffffff;
+    width: max-content;
 }
 
 .containerRubrique > h4{
@@ -369,21 +370,23 @@ a{
 .qui,.exp,.hobbies,.skills{
     color: #FFDEB8;
 }
-.containerQui,.containerSkills{
+.containerQui,.containerSkills,.containerHobbies,.containerMyExp{
     color: white;
     width: 60%;
 flex-direction: column;
 margin-left: auto;
 padding-right: 25px;
-transform: translateY(-10rem);
+transform: translateY(-14rem);
 }
 
-.containerQui > h4,.containerSkills > h4{
+.containerQui > h4,.containerSkills > h4, .containerMyExp > h4{
     transform: translateY(-1rem);
     font-size: 3rem;
 }
-.containerQui > p,.containerSkills > p{
-    width: 50%;
+.containerQui > p,.containerSkills > p, .containerMyExp > div > p{
+    width: 80%;
+    font-size: 1.5vw;
+    margin: 10px 0px;
 }
 
 .logoProg > div{
@@ -407,7 +410,7 @@ transform: translateY(-10rem);
       ". figma ."; 
       align-items: center;
       margin-top:  50px;
-      width: 40%;
+      width: 60%;
   }
 
   .html { grid-area: html; justify-self: center; }
