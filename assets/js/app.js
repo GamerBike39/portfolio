@@ -247,9 +247,11 @@ let header = document.querySelector("header");
 let quiBtn = document.querySelector(".qui");
 let skillBtn = document.querySelector(".skills");
 let expBtn = document.querySelector(".exp");
+let btnHobbie = document.querySelector(".hobbies");
 let containerQui = document.querySelector(".containerQui");
 let containerSkill = document.querySelector(".containerSkills");
 let containerExp = document.querySelector(".containerMyExp");
+let containerHobbie = document.querySelector(".containerHobbies");
 
 btnAbout.addEventListener("click", function () {
   about.classList.toggle("displayNone");
@@ -264,25 +266,38 @@ btnAbout.addEventListener("click", function () {
 
 quiBtn.addEventListener("click", function () {
   containerQui.classList.toggle("displayNone");
-  containerQui.classList.toggle("flex");
+  // containerQui.classList.toggle("flex");
   containerSkill.classList.add("displayNone");
   containerExp.classList.add("displayNone");
+  containerHobbie.classList.add("displayNone");
   header.classList.remove("popNav");
   header.classList.add("dekstopNav");
 });
 
 skillBtn.addEventListener("click", function () {
   containerSkill.classList.toggle("displayNone");
-  containerSkill.classList.toggle("flex");
+  // containerSkill.classList.toggle("flex");
   containerQui.classList.add("displayNone");
   containerExp.classList.add("displayNone");
+  containerHobbie.classList.add("displayNone");
   header.classList.remove("popNav");
   header.classList.add("dekstopNav");
 });
 
 expBtn.addEventListener("click", function () {
   containerExp.classList.toggle("displayNone");
-  containerExp.classList.toggle("flex");
+  // containerExp.classList.toggle("flex");
+  containerSkill.classList.add("displayNone");
+  containerQui.classList.add("displayNone");
+  containerHobbie.classList.add("displayNone");
+  header.classList.remove("popNav");
+  header.classList.add("dekstopNav");
+});
+
+btnHobbie.addEventListener("click", function () {
+  containerHobbie.classList.toggle("displayNone");
+  // containerHobbie.classList.toggle("flex");
+  containerExp.classList.add("displayNone");
   containerSkill.classList.add("displayNone");
   containerQui.classList.add("displayNone");
   header.classList.remove("popNav");
