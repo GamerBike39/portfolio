@@ -303,3 +303,66 @@ btnHobbie.addEventListener("click", function () {
   header.classList.remove("popNav");
   header.classList.add("dekstopNav");
 });
+
+new ResizeObserver((entries) => {
+  if (entries[0].contentRect.width <= 400) {
+    containerHobbie.classList.remove("flex");
+    containerExp.classList.remove("flex");
+    containerSkill.classList.remove("flex");
+    containerQui.classList.remove("flex");
+  } else {
+    containerQui.classList.add("flex");
+    containerSkill.classList.add("flex");
+    containerExp.classList.add("flex");
+    containerHobbie.classList.add("flex");
+  }
+  btnPop.addEventListener("click", () => {
+    modalPop.classList.add("opacfull");
+    header.classList.add("displayNone");
+    containerProject.classList.add("displayNone");
+    setTimeout(function () {
+      modalPop.classList.remove("opacfull");
+    }, 500);
+  });
+
+  btnAllo.addEventListener("click", function () {
+    modalAllo.classList.add("opacfull");
+    header.classList.add("displayNone");
+    containerProject.classList.add("displayNone");
+    setTimeout(function () {
+      modalAllo.classList.remove("opacfull");
+    }, 500);
+  });
+  btnCrea.addEventListener("click", function () {
+    modalCrea.classList.add("opacfull");
+    header.classList.add("displayNone");
+    containerProject.classList.add("displayNone");
+    setTimeout(function () {
+      modalCrea.classList.remove("opacfull");
+    }, 500);
+  });
+  btnBoots.addEventListener("click", function () {
+    modalBoots.classList.add("opacfull");
+    header.classList.add("displayNone");
+    containerProject.classList.add("displayNone");
+    setTimeout(function () {
+      modalBoots.classList.remove("opacfull");
+    }, 500);
+  });
+  closeModalePop.addEventListener("click", function () {
+    header.classList.remove("displayNone");
+    containerProject.classList.remove("displayNone");
+  });
+  closeModaleAllo.addEventListener("click", function () {
+    header.classList.remove("displayNone");
+    containerProject.classList.remove("displayNone");
+  });
+  closeModaleCrea.addEventListener("click", function () {
+    header.classList.remove("displayNone");
+    containerProject.classList.remove("displayNone");
+  });
+  closeModaleBoots.addEventListener("click", function () {
+    header.classList.remove("displayNone");
+    containerProject.classList.remove("displayNone");
+  });
+}).observe(document.body);

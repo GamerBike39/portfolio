@@ -34,7 +34,7 @@
 }
   
 .displayNone{
-    display: none;
+    display: none!important;
 }
 .scaleTranslate{
     transform : scale(0.6) translateX(35rem);
@@ -506,6 +506,16 @@ padding-top: 40px;
     top: -1px;
     right: -4px;
 }
-
+body{
+    overflow-x: hidden;
 }
-
+}
+.logoProg{
+    gap: 0px 0px;
+    margin-top: 0;
+    width: auto;
+}
+.logoProg > div > img{
+    width : 35px;
+    height: 35px;
+}
