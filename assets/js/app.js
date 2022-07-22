@@ -310,59 +310,99 @@ new ResizeObserver((entries) => {
     containerExp.classList.remove("flex");
     containerSkill.classList.remove("flex");
     containerQui.classList.remove("flex");
+    btnPop.addEventListener("click", () => {
+      modalPop.classList.add("opacfull");
+      header.classList.add("displayNone");
+      containerProject.classList.add("displayNone");
+      setTimeout(function () {
+        modalPop.classList.remove("opacfull");
+      }, 500);
+    });
+
+    btnAllo.addEventListener("click", function () {
+      modalAllo.classList.add("opacfull");
+      header.classList.add("displayNone");
+      containerProject.classList.add("displayNone");
+      setTimeout(function () {
+        modalAllo.classList.remove("opacfull");
+      }, 500);
+    });
+    btnCrea.addEventListener("click", function () {
+      modalCrea.classList.add("opacfull");
+      header.classList.add("displayNone");
+      containerProject.classList.add("displayNone");
+      setTimeout(function () {
+        modalCrea.classList.remove("opacfull");
+      }, 500);
+    });
+    btnBoots.addEventListener("click", function () {
+      modalBoots.classList.add("opacfull");
+      header.classList.add("displayNone");
+      containerProject.classList.add("displayNone");
+      setTimeout(function () {
+        modalBoots.classList.remove("opacfull");
+      }, 500);
+    });
+    closeModalePop.addEventListener("click", function () {
+      header.classList.remove("displayNone");
+      containerProject.classList.remove("displayNone");
+    });
+    closeModaleAllo.addEventListener("click", function () {
+      header.classList.remove("displayNone");
+      containerProject.classList.remove("displayNone");
+    });
+    closeModaleCrea.addEventListener("click", function () {
+      header.classList.remove("displayNone");
+      containerProject.classList.remove("displayNone");
+    });
+    closeModaleBoots.addEventListener("click", function () {
+      header.classList.remove("displayNone");
+      containerProject.classList.remove("displayNone");
+    });
   } else {
     containerQui.classList.add("flex");
     containerSkill.classList.add("flex");
     containerExp.classList.add("flex");
     containerHobbie.classList.add("flex");
   }
-  btnPop.addEventListener("click", () => {
-    modalPop.classList.add("opacfull");
-    header.classList.add("displayNone");
-    containerProject.classList.add("displayNone");
-    setTimeout(function () {
-      modalPop.classList.remove("opacfull");
-    }, 500);
-  });
-
-  btnAllo.addEventListener("click", function () {
-    modalAllo.classList.add("opacfull");
-    header.classList.add("displayNone");
-    containerProject.classList.add("displayNone");
-    setTimeout(function () {
-      modalAllo.classList.remove("opacfull");
-    }, 500);
-  });
-  btnCrea.addEventListener("click", function () {
-    modalCrea.classList.add("opacfull");
-    header.classList.add("displayNone");
-    containerProject.classList.add("displayNone");
-    setTimeout(function () {
-      modalCrea.classList.remove("opacfull");
-    }, 500);
-  });
-  btnBoots.addEventListener("click", function () {
-    modalBoots.classList.add("opacfull");
-    header.classList.add("displayNone");
-    containerProject.classList.add("displayNone");
-    setTimeout(function () {
-      modalBoots.classList.remove("opacfull");
-    }, 500);
-  });
-  closeModalePop.addEventListener("click", function () {
-    header.classList.remove("displayNone");
-    containerProject.classList.remove("displayNone");
-  });
-  closeModaleAllo.addEventListener("click", function () {
-    header.classList.remove("displayNone");
-    containerProject.classList.remove("displayNone");
-  });
-  closeModaleCrea.addEventListener("click", function () {
-    header.classList.remove("displayNone");
-    containerProject.classList.remove("displayNone");
-  });
-  closeModaleBoots.addEventListener("click", function () {
-    header.classList.remove("displayNone");
-    containerProject.classList.remove("displayNone");
-  });
 }).observe(document.body);
+
+// curseur custom
+var cursor = document.querySelector(".cursor");
+var cursorinner = document.querySelector(".cursor2");
+var a = document.querySelectorAll("a");
+
+document.addEventListener("mousemove", function (e) {
+  var x = e.clientX;
+  var y = e.clientY;
+  cursor.style.transform = `translate3d(calc(${e.clientX}px - 50%), calc(${
+    e.clientY
+  }px - 50%), 0) rotate(${x + y}deg)`;
+  cursor.style.animation = " animation: rotate 0.5s infinite ;";
+});
+
+document.addEventListener("mousemove", function (e) {
+  var x = e.clientX;
+  var y = e.clientY;
+  cursorinner.style.left = x + "px";
+  cursorinner.style.top = y + "px";
+});
+
+document.addEventListener("mousedown", function () {
+  cursor.classList.add("click");
+  cursorinner.classList.add("cursorinnerhover");
+});
+
+document.addEventListener("mouseup", function () {
+  cursor.classList.remove("click");
+  cursorinner.classList.remove("cursorinnerhover");
+});
+
+a.forEach((item) => {
+  item.addEventListener("mouseover", () => {
+    cursor.classList.add("hover");
+  });
+  item.addEventListener("mouseleave", () => {
+    cursor.classList.remove("hover");
+  });
+});
