@@ -71,24 +71,28 @@ closeModalePop.addEventListener("click", function () {
   modalPop.classList.toggle("displayNone");
   containerProject.classList.remove("scaleTranslate");
   dekstopNavModale.classList.remove("dekstopNavModale");
+  dekstopNavModale.classList.remove("scaleTranslate");
 });
 closeModaleAllo.addEventListener("click", function () {
   modalAllo.classList.toggle("flex");
   modalAllo.classList.toggle("displayNone");
   containerProject.classList.remove("scaleTranslate");
   dekstopNavModale.classList.remove("dekstopNavModale");
+  dekstopNavModale.classList.remove("scaleTranslate");
 });
 closeModaleCrea.addEventListener("click", function () {
   modalCrea.classList.toggle("flex");
   modalCrea.classList.toggle("displayNone");
   containerProject.classList.remove("scaleTranslate");
   dekstopNavModale.classList.remove("dekstopNavModale");
+  dekstopNavModale.classList.remove("scaleTranslate");
 });
 closeModaleBoots.addEventListener("click", function () {
   modalBoots.classList.toggle("flex");
   modalBoots.classList.toggle("displayNone");
   containerProject.classList.remove("scaleTranslate");
   dekstopNavModale.classList.remove("dekstopNavModale");
+  dekstopNavModale.classList.remove("scaleTranslate");
 });
 
 btnPop.addEventListener("click", () => {
@@ -105,10 +109,12 @@ btnPop.addEventListener("click", () => {
     containerProject.classList.add("scaleTranslate");
     dekstopNavModale.classList.remove("dekstopNav");
     dekstopNavModale.classList.add("dekstopNavModale");
+    dekstopNavModale.classList.add("scaleTranslate");
   } else {
     containerProject.classList.remove("scaleTranslate");
     dekstopNavModale.classList.remove("dekstopNavModale");
     dekstopNavModale.classList.add("dekstopNav");
+    dekstopNavModale.classList.remove("scaleTranslate");
   }
   setTimeout(function () {
     modalPop.classList.remove("opacfull");
@@ -129,10 +135,12 @@ btnAllo.addEventListener("click", function () {
     containerProject.classList.add("scaleTranslate");
     dekstopNavModale.classList.remove("dekstopNav");
     dekstopNavModale.classList.add("dekstopNavModale");
+    dekstopNavModale.classList.add("scaleTranslate");
   } else {
     containerProject.classList.remove("scaleTranslate");
     dekstopNavModale.classList.remove("dekstopNavModale");
     dekstopNavModale.classList.add("dekstopNav");
+    dekstopNavModale.classList.remove("scaleTranslate");
   }
   setTimeout(function () {
     modalAllo.classList.remove("opacfull");
@@ -152,10 +160,12 @@ btnCrea.addEventListener("click", function () {
     containerProject.classList.add("scaleTranslate");
     dekstopNavModale.classList.remove("dekstopNav");
     dekstopNavModale.classList.add("dekstopNavModale");
+    dekstopNavModale.classList.add("scaleTranslate");
   } else {
     containerProject.classList.remove("scaleTranslate");
     dekstopNavModale.classList.remove("dekstopNavModale");
     dekstopNavModale.classList.add("dekstopNav");
+    dekstopNavModale.classList.remove("scaleTranslate");
   }
   setTimeout(function () {
     modalCrea.classList.remove("opacfull");
@@ -175,10 +185,12 @@ btnBoots.addEventListener("click", function () {
     containerProject.classList.add("scaleTranslate");
     dekstopNavModale.classList.remove("dekstopNav");
     dekstopNavModale.classList.add("dekstopNavModale");
+    dekstopNavModale.classList.add("scaleTranslate");
   } else {
     containerProject.classList.remove("scaleTranslate");
     dekstopNavModale.classList.remove("dekstopNavModale");
     dekstopNavModale.classList.add("dekstopNav");
+    dekstopNavModale.classList.remove("scaleTranslate");
   }
   setTimeout(function () {
     modalBoots.classList.remove("opacfull");
@@ -261,6 +273,7 @@ btnAbout.addEventListener("click", function () {
     allModal[i].classList.add("displayNone");
     allModal[i].classList.remove("flex");
     header.classList.add("popNav");
+    header.classList.remove("scaleTranslate");
   }
 });
 
@@ -272,6 +285,7 @@ quiBtn.addEventListener("click", function () {
   containerHobbie.classList.add("displayNone");
   header.classList.remove("popNav");
   header.classList.add("dekstopNav");
+  header.classList.remove("scaleTranslate");
 });
 
 skillBtn.addEventListener("click", function () {
@@ -282,6 +296,7 @@ skillBtn.addEventListener("click", function () {
   containerHobbie.classList.add("displayNone");
   header.classList.remove("popNav");
   header.classList.add("dekstopNav");
+  header.classList.remove("scaleTranslate");
 });
 
 expBtn.addEventListener("click", function () {
@@ -292,6 +307,7 @@ expBtn.addEventListener("click", function () {
   containerHobbie.classList.add("displayNone");
   header.classList.remove("popNav");
   header.classList.add("dekstopNav");
+  header.classList.remove("scaleTranslate");
 });
 
 btnHobbie.addEventListener("click", function () {
@@ -302,6 +318,7 @@ btnHobbie.addEventListener("click", function () {
   containerQui.classList.add("displayNone");
   header.classList.remove("popNav");
   header.classList.add("dekstopNav");
+  header.classList.remove("scaleTranslate");
 });
 
 new ResizeObserver((entries) => {

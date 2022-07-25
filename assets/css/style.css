@@ -79,7 +79,6 @@ a{
     bottom: 0;
     right: 299px;
     transition: all 0.3s ease-in-out;
-    transform: translateX(50px);
 }
 .popNav{
     position: fixed;
@@ -338,7 +337,7 @@ a{
         border-radius: 5px;
         cursor: pointer;
         position: absolute;
-        top: 38%;
+        top: 28%;
         right: 10px;
     }
     .tns-controls [data-controls = prev]{
@@ -349,7 +348,7 @@ a{
         border-radius: 5px;
         cursor: pointer;
         position: absolute;
-        top: 38%
+        top: 28%
     }
 
     .tns-nav{
@@ -388,7 +387,7 @@ a{
 flex-direction: column;
 margin-left: auto;
 padding-right: 25px;
-transform: translateY(-14rem);
+transform: translateY(-12rem);
 }
 
 .containerQui > h4,.containerSkills > h4, .containerMyExp > h4, .containerHobbies > h4{
