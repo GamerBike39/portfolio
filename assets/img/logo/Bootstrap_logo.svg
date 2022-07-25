@@ -1,13 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="512" height="408">
     <defs>
         <linearGradient id="bs-logo-a" x1="76.079" x2="523.48" y1="10.798" y2="365.945" gradientUnits="userSpaceOnUse">
-            <stop stop-color="#b0deb0" />
-            <stop offset="1" stop-color="#6610f2" />
+            <stop stop-color="#FFDEB8" />
+            <stop offset="1" stop-color="#FFDEB8" />
         </linearGradient>
         <linearGradient id="bs-logo-b" x1="193.508" x2="293.514" y1="109.74" y2="278.872"
             gradientUnits="userSpaceOnUse">
-            <stop stop-color="#fff" />
-            <stop offset="1" stop-color="#eaeaea" />
+            <stop stop-color="#3a3636" />
+            <stop offset="1" stop-color="#000000" />
         </linearGradient>
         <filter xmlns="http://www.w3.org/2000/svg" id="bs-logo-c" width="197" height="249" x="161.901" y="83.457"
             color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse">
