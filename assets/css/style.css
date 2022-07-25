@@ -37,7 +37,7 @@
     display: none!important;
 }
 .scaleTranslate{
-    transform : scale(0.6) translateX(35rem);
+    transform : scale(0.6) translateX(28rem);
 }
 /* ********************************* */
 body{
