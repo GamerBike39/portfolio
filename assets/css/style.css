@@ -281,7 +281,7 @@ a{
       width: 85%;
       color: white ;
   }
-  div.modal:nth-child(4) > div:nth-child(2) > p:nth-child(4) {
+  .modal p:nth-child(4) {
     padding-top: 20px;
    }
    
@@ -416,24 +416,65 @@ transform: translateY(-14rem);
     display: grid; 
     grid-auto-columns: 1fr; 
     grid-template-columns: 1fr 1fr 1fr; 
-    grid-template-rows: 1fr 1fr 1fr; 
-    gap: 40px 0px; 
+    grid-template-rows: 1fr 1fr 1fr 1fr; 
+    gap: 0px 0px; 
     grid-template-areas: 
       "html css javascript"
-      "php bootstrap sql"
-      ". figma ."; 
-      align-items: center;
-      margin-top:  50px;
-      width: 60%;
+      "php bootstrap laravel"
+      "wordpress figma vue"
+      "github gsap tailwind"; 
+    align-items: center; 
+    gap : 10px;
+    width: 50%;
   }
-
-  .html { grid-area: html; justify-self: center; }
-  .css { grid-area: css; justify-self: center; }
-  .javascript { grid-area: javascript; justify-self: center;  }
-  .php { grid-area: php; justify-self: center; }
-  .bootstrap { grid-area: bootstrap; justify-self: center; }
-  .sql { grid-area: sql; justify-self: center; }
-  .figma { grid-area: figma; justify-self: center; width : 150px; }
+  .html {
+    justify-self: center; 
+    grid-area: html; 
+  }
+  .css {
+    justify-self: center; 
+    grid-area: css; 
+  }
+  .javascript {
+    justify-self: center; 
+    grid-area: javascript; 
+  }
+  .php {
+    justify-self: center; 
+    grid-area: php; 
+  }
+  .bootstrap {
+    justify-self: center; 
+    grid-area: bootstrap; 
+  }
+  .figma {
+    justify-self: center; 
+    grid-area: figma; 
+  }
+  .laravel {
+    justify-self: center; 
+    grid-area: laravel; 
+  }
+  .vue {
+    justify-self: center; 
+    grid-area: vue; 
+  }
+  .wordpress {
+    justify-self: center; 
+    grid-area: wordpress; 
+  }
+  .github {
+    justify-self: center; 
+    grid-area: github; 
+  }
+  .gsap {
+    justify-self: center; 
+    grid-area: gsap; 
+  }
+  .tailwind {
+    justify-self: center; 
+    grid-area: tailwind; 
+  }
 
   .containerQui > img:nth-child(4) {
     height: 41vh;
