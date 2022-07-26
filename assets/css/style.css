@@ -365,6 +365,7 @@ a{
     width: 100vw;
     height: 100vh;
     color: white;
+    perspective: 587px;
 }
 
 .containerRubrique{
@@ -375,6 +376,8 @@ a{
     text-align: left;
     color: #ffffff;
     width: max-content;
+    transform: rotateX(-4deg) rotateY(365deg) translateY(1px);
+text-transform: uppercase;
 }
 
 .containerRubrique > h4{
@@ -529,6 +532,9 @@ transform: translateY(-12rem);
   }
 
 
+
+
+
 /* media querries */
 @media screen and (max-width: 400px){
 .cursor,.cursor2{
@@ -669,7 +675,14 @@ div.modal:nth-child(5) > div:nth-child(2) > p:nth-child(4) {
     padding-top: 50px;
     padding-bottom: 50px;
     transform: translateY(-10%);
+    perspective: 280px;
+
 }
+.formulaire {
+    padding-top: 50px;
+    transform: rotateY(350deg) scale(1.4);
+   }
+   
 
 .containerContact > h4 {
     font-size: 5vw;
@@ -678,8 +691,40 @@ div.modal:nth-child(5) > div:nth-child(2) > p:nth-child(4) {
 .containerContact > p {
     font-size: 2vw;
 }
-.container{
-    max-width: 700px;
-  }
-
+#nom {
+    width: 25vw;
+    margin-left: 29px;
+    height: 30px;
+   }
+#email {
+    width: 25vw;
+    margin-left: 25px;
+    height: 30px;
+   }
+   #message {
+    width: 25vw;
+   }
+   
+   .formulaire > form:nth-child(1) {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+   }
+   
+   .btn-primary {
+    background-color: #FFDEB8;
+    color: #002147;
+    border-color: #FFDEB8;
+    width: 25%;
+    transform: translateX(84px);
+   }
   
+   div.form-group:nth-child(3) > label:nth-child(1) {
+    vertical-align: top;
+    padding-right: 14px;
+   } 
+   div.form-group:nth-child(2) > label:nth-child(1), div.form-group:nth-child(1) > label:nth-child(1){
+    padding-right: 14px;
+   }
+   
+   

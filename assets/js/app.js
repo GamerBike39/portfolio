@@ -431,3 +431,4 @@ const contactForm = document.querySelector(".containerContact");
   contactBtn.addEventListener("click", function () {
     contactForm.classList.toggle("displayNone");
   });
+
