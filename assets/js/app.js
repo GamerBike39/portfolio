@@ -205,7 +205,7 @@ var slider = tns({
   mouseDrag: true,
   swipeAngle: false,
   speed: 400,
-  controlsText: ["⬅️", "➡️"],
+  controlsText: ["⬅", "➡"],
   controlsPosition: "bottom",
   loop: true,
 });
@@ -216,7 +216,7 @@ var slider = tns({
   mouseDrag: true,
   swipeAngle: false,
   speed: 400,
-  controlsText: ["⬅️", "➡️"],
+  controlsText: ["⬅", "➡"],
   controlsPosition: "bottom",
   loop: true,
 });
@@ -227,7 +227,7 @@ var slider = tns({
   mouseDrag: true,
   swipeAngle: false,
   speed: 400,
-  controlsText: ["⬅️", "➡️"],
+  controlsText: ["⬅", "➡"],
   controlsPosition: "bottom",
   loop: true,
 });
@@ -238,7 +238,7 @@ var slider = tns({
   mouseDrag: true,
   swipeAngle: false,
   speed: 400,
-  controlsText: ["⬅️", "➡️"],
+  controlsText: ["⬅", "➡"],
   controlsPosition: "bottom",
   loop: true,
 });
@@ -423,3 +423,11 @@ a.forEach((item) => {
     cursor.classList.remove("hover");
   });
 });
+
+// rubrique contact form
+const contactBtn = document.querySelector(".contactBtn");
+const contactForm = document.querySelector(".containerContact");
+
+  contactBtn.addEventListener("click", function () {
+    contactForm.classList.toggle("displayNone");
+  });
