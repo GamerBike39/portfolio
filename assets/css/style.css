@@ -539,7 +539,7 @@ transform: translateY(-12rem);
     align-items: center;
     justify-content: center;
     width: 100vw;
-    height: 100vh;
+    height: 95vh;
     background-color: #002147;
     color: #FFDEB8;
     padding-top: 50px;
@@ -735,6 +735,7 @@ transform: translateY(-12rem);
 
     .containerContact{
         transform: translateY(0%);
+        justify-content: inherit;
     }
        #nom {
         width: 66vw;
