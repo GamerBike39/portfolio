@@ -676,15 +676,15 @@ transform: translateY(-12rem);
     }
     .containerQui > p,.containerSkills > p, .containerMyExp > div > p, .containerHobbies > p {
         width: 109%;
-        font-size: 3.5vw;
+        font-size: 4.5vw;
         font-family: 'Roboto Flex', sans-serif;
     }
     .containerQui,.containerSkills,.containerHobbies,.containerMyExp {
     width: 69%;
     margin-left: auto;
     margin-right: auto;
-    height: 0vh;
-    padding-top: 40px;
+    height: 36vh;
+    padding-top: 20px;
     }
     .containerQui > h4,.containerSkills > h4, .containerMyExp > h4, .containerHobbies > h4 {
         font-size: 1.3rem;
@@ -723,8 +723,8 @@ transform: translateY(-12rem);
     
     .containerHobbies > img:nth-child(4) {
         right: -66px;
-        top: 30vh;
-        height: 42vh;
+        top: 29vh;
+        height: 36vh;
     }
     div.modal:nth-child(5) > div:nth-child(2) > p:nth-child(4) {
         padding-top: 20px;
