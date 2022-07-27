@@ -10,8 +10,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100;8..144,200;8..144,300;8..144,400;8..144,500;8..144,600;8..144,700;8..144,800;8..144,900;8..144,1000&display=swap"
         rel="stylesheet">
-    <link href="//db.onlinewebfonts.com/c/29800a9e7d146302b8ed9ad2f848db63?family=Druk+Wide+Web+Bold+Regular"
-        rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
@@ -274,8 +273,6 @@
         </div>
     </div>
 </div>
-<!-- gestion des mails du formulaire de contact
-    https://www.w3schools.com/php/php_form_mail.asp -->
 <?php
 if(isset($_POST['nom']) && isset($_POST['email']) && isset($_POST['message'])){
     $nom = $_POST['nom'];
@@ -288,10 +285,6 @@ if(isset($_POST['nom']) && isset($_POST['email']) && isset($_POST['message'])){
     mail($to, $subject, $body, $headers);
 }
 ?>
-
-
-
-
     <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
     <script src="assets/js/ztext.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
