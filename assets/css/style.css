@@ -52,6 +52,10 @@ body{
     cursor: none;
 }
 
+.z-text{
+    cursor: none;
+}
+
 #containerHome{
     margin: 0;
     padding: 0;
@@ -62,6 +66,7 @@ body{
 a{
     text-decoration: none;
     color: aliceblue;
+    cursor: none;
 }
  ul{
     color: aliceblue;
@@ -92,6 +97,7 @@ a{
     font-size: 3.5rem;
     font-weight: 800;
     margin-left: 40px;
+    cursor: none;
 }
 .namePop{
     gap: 20px;
@@ -102,6 +108,7 @@ a{
 
 .contact a{
     fill: white;
+    cursor: none;
 }
 
 .containerProject{
@@ -376,7 +383,7 @@ a{
     text-align: left;
     color: #ffffff;
     width: max-content;
-    height: max-content;
+    min-height: 44vh;
     transform: rotateX(-4deg) rotateY(365deg) translateY(1px);
 text-transform: uppercase;
 }
@@ -607,8 +614,9 @@ transform: translateY(-12rem);
     }
     
     .containerProject{
-        line-height: 40px;
-        font-size: 11.5vw;
+        line-height: 80px;
+        font-size: 17.5vw;
+        padding-bottom: 50px;
     }
     #containerHome {
         min-height: 75vh;
