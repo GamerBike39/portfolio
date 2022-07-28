@@ -19,10 +19,12 @@
 }
 .opac{
     opacity: 0.3;
+    -webkit-text-fill-color: transparent;
 }
 .opacfull{
     animation: opacFull 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
+ 
 }
 @keyframes opacFull{
     0%{
@@ -50,6 +52,12 @@ body{
     scroll-behavior: smooth;
     transition: all 0.3s ease-in-out;
     cursor: none;
+}
+.smoke{
+    position: fixed;
+    min-height: 100vh;
+    width: 100vw;
+    opacity: 0.03;
 }
 
 .z-text{
@@ -377,7 +385,7 @@ a{
 
 .containerRubrique{
     margin: 20px 56px;
-    padding-top: 20px;
+    /* padding-top: 20px; */
    flex-direction: column;
     font-size: 2vw;
     text-align: left;
@@ -386,6 +394,7 @@ a{
     min-height: 55vh;
     transform: rotateX(-4deg) rotateY(365deg) translateY(1px);
 text-transform: uppercase;
+padding: 50px;
 }
 
 .containerRubrique > h4{
@@ -401,7 +410,7 @@ text-transform: uppercase;
 flex-direction: column;
 margin-left: auto;
 padding-right: 25px;
-transform: translateY(-12rem);
+transform: translateY(-29rem);
 }
 
 .containerQui > h4,.containerSkills > h4, .containerMyExp > h4, .containerHobbies > h4{
@@ -581,6 +590,8 @@ transform: translateY(-12rem);
    }
    #message {
     width: 25vw;
+    height: 10vh;
+    resize: none;
    }
    
    .formulaire > form:nth-child(1) {
@@ -605,6 +616,9 @@ transform: translateY(-12rem);
     padding-right: 14px;
    }
    
+
+
+
    /* media querries */
 @media screen and (max-width: 500px){
     .cursor,.cursor2{
@@ -695,7 +709,9 @@ transform: translateY(-12rem);
     margin-right: auto;
     min-height: 36vh;
     padding-top: 20px;
+    transform: translateY(-12rem);
     }
+    
     .containerQui > h4,.containerSkills > h4, .containerMyExp > h4, .containerHobbies > h4 {
         font-size: 1.3rem;
     }

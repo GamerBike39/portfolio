@@ -205,7 +205,7 @@ var slider = tns({
   mouseDrag: true,
   swipeAngle: false,
   speed: 400,
-  controlsText: ["⬅", "➡"],
+  controlsText: ["<", ">"],
   controlsPosition: "bottom",
   loop: true,
 });
@@ -216,7 +216,7 @@ var slider = tns({
   mouseDrag: true,
   swipeAngle: false,
   speed: 400,
-  controlsText: ["⬅", "➡"],
+  controlsText: ["<", ">"],
   controlsPosition: "bottom",
   loop: true,
 });
@@ -227,7 +227,7 @@ var slider = tns({
   mouseDrag: true,
   swipeAngle: false,
   speed: 400,
-  controlsText: ["⬅", "➡"],
+  controlsText: ["<", ">"],
   controlsPosition: "bottom",
   loop: true,
 });
@@ -238,7 +238,7 @@ var slider = tns({
   mouseDrag: true,
   swipeAngle: false,
   speed: 400,
-  controlsText: ["⬅", "➡"],
+  controlsText: ["<", ">"],
   controlsPosition: "bottom",
   loop: true,
 });
