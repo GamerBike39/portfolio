@@ -253,17 +253,18 @@ var ztxt = new Ztextify(".name", {
 
 // *************** About ****************************
 
-let about = document.querySelector(".containerAbout");
-let btnAbout = document.querySelector(".btnAbout");
-let header = document.querySelector("header");
-let quiBtn = document.querySelector(".qui");
-let skillBtn = document.querySelector(".skills");
-let expBtn = document.querySelector(".exp");
-let btnHobbie = document.querySelector(".hobbies");
-let containerQui = document.querySelector(".containerQui");
-let containerSkill = document.querySelector(".containerSkills");
-let containerExp = document.querySelector(".containerMyExp");
-let containerHobbie = document.querySelector(".containerHobbies");
+const about = document.querySelector(".containerAbout");
+const btnAbout = document.querySelector(".btnAbout");
+const header = document.querySelector("header");
+const quiBtn = document.querySelector(".qui");
+const skillBtn = document.querySelector(".skills");
+const expBtn = document.querySelector(".exp");
+const btnHobbie = document.querySelector(".hobbies");
+const containerQui = document.querySelector(".containerQui");
+const containerSkill = document.querySelector(".containerSkills");
+const containerExp = document.querySelector(".containerMyExp");
+const containerHobbie = document.querySelector(".containerHobbies");
+const home = document.querySelector(".home");
 
 btnAbout.addEventListener("click", function () {
   about.classList.toggle("displayNone");
@@ -425,10 +426,21 @@ a.forEach((item) => {
 });
 
 // rubrique contact form
-const contactBtn = document.querySelector(".contactBtn");
-const contactForm = document.querySelector(".containerContact");
+// const contactBtn = document.querySelector(".contactBtn");
+// const contactForm = document.querySelector(".containerContact");
 
-  contactBtn.addEventListener("click", function () {
-    contactForm.classList.toggle("displayNone");
-  });
+//   contactBtn.addEventListener("click", function () {
+//     contactForm.classList.toggle("displayNone");
+//   });
 
+function closeAllIfModalOpen () {
+ for (let i = 0; i < allModal.length; i++) {
+   if (allModal[i].classList.contains("flex")) {
+     home.classList.add("displayNone");
+   }
+   else {
+      home.classList.remove("displayNone");
+   }
+ }
+}
+closeAllIfModalOpen();
