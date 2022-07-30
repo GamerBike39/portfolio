@@ -52,6 +52,10 @@ body{
     scroll-behavior: smooth;
     transition: all 0.3s ease-in-out;
     cursor: none;
+    overflow-x: hidden;  
+}
+body::-webkit-scrollbar{
+    width: 3px;
 }
 .smoke{
     position: fixed;
