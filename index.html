@@ -232,10 +232,10 @@ if(isset($_POST['nom']) && isset($_POST['email']) && isset($_POST['message'])){
     mail($to, $subject, $body, $headers);
 }
 // avertir sil le mail est bien envoyé ou non sur la page
-if(mail($to, $subject, $body, $headers)){
+<!-- if(mail($to, $subject, $body, $headers)){
     echo '<div class="alert alert-success">Votre message a bien été envoyé</div>';
 }else{
-    echo '<div class="alert alert-danger">Une erreur est survenue lors de l\'envoi du message</div>';
+    echo '<div class="alert alert-danger">Une erreur est survenue lors de l\'envoi du message</div>'; -->
 }
 }
 }
