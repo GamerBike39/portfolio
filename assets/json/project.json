@@ -29,7 +29,7 @@
         "img" :"<img src='assets/img/creativeAccueil.jpg'><img src='assets/img/creative2.jpg'><img src='assets/img/creativeAkita.jpg'>"
              ,
         "desc" :"<p>Projet réalisé durant ma formation Access Code School.</p><p>Allojyvé est un projet qui a comme fonction d'utilisé l'API de The Movie Database, pour faire un suivie des sorties populaires, à venir, et en cours.</p><p>La contrainte de ce projet était de ne pas utiliser d'HTML et de tout générer avec Javascript</p>",
-        "github" : "https://github.com/GamerBike39/projet-1-creative",
+        "github" :"https://github.com/GamerBike39/projet-1-creative",
         "link" : "https://gamerbike39.github.io/projet-1-creative/"
     },
     {
