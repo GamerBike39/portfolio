@@ -1,7 +1,7 @@
-let projetOne = document.querySelector(".containerProject > h3:nth-child(1)");
-let projetTwo = document.querySelector(".containerProject > h3:nth-child(2)");
-let projetThree = document.querySelector(".containerProject > h3:nth-child(3)");
-let projetFour = document.querySelector(".containerProject > h3:nth-child(4)");
+const projetOne = document.querySelector(".containerProject > h3:nth-child(1)");
+const projetTwo = document.querySelector(".containerProject > h3:nth-child(2)");
+const projetThree = document.querySelector(".containerProject > h3:nth-child(3)");
+const projetFour = document.querySelector(".containerProject > h3:nth-child(4)");
 // ****modale****
 const btnPop = document.querySelector(".btn-modalPop");
 const btnAllo = document.querySelector(".btn-modalAllo");
@@ -19,49 +19,59 @@ const closeModaleCrea = document.querySelector(".closeCrea");
 const closeModaleBoots = document.querySelector(".closeBoots");
 const containerProject = document.querySelector(".containerProject");
 const dekstopNavModale = document.querySelector("header");
-
+// modal à remplir avec json
+const modalTitle = document.querySelector(".modalTitle");
+const modalImg = document.querySelector(".modalImg");
+const modalDesc = document.querySelectorAll(".modalDesc");
+const modalGit = document.querySelector(".modalGit")
+const modalLink = document.querySelector(".modalLink");
+const modalBtn = document.querySelectorAll(".containerProject > h3");
 // ********* mouse enter and leave events ***********
+const animModalBtn = () => {
+  modalBtn.forEach((item) => {
+    item.addEventListener("mouseenter", () => {
+      for (let i = 0; i < modalBtn.length; i++) {
+        item.classList.add("opac");
+      }
+    });
+    item.addEventListener("mouseleave", () => {
+      item.classList.remove("opac");
+    });
+  });
+}
+animModalBtn();
+
+
 
 // projetOne.addEventListener("mouseenter", function () {
 //   projetTwo.classList.add("opac");
 //   projetThree.classList.add("opac");
 //   projetFour.classList.add("opac");
-
 // });
-
 // projetOne.addEventListener("mouseleave", function () {
-//   if (modalPop.classList.contains("flex") === false) {
-//     projetTwo.classList.remove("opac");
-//     projetThree.classList.remove("opac");
-//     projetFour.classList.remove("opac");
-//   }
+//   projetTwo.classList.remove("opac");
+//   projetThree.classList.remove("opac");
+//   projetFour.classList.remove("opac");
 // });
-
 // projetTwo.addEventListener("mouseenter", function () {
 //   projetOne.classList.add("opac");
 //   projetThree.classList.add("opac");
 //   projetFour.classList.add("opac");
-
 // });
 // projetTwo.addEventListener("mouseleave", function () {
-//   if (modalAllo.classList.contains("flex") === false) {
-//     projetOne.classList.remove("opac");
-//     projetThree.classList.remove("opac");
-//     projetFour.classList.remove("opac");
-//   }
+//   projetOne.classList.remove("opac");
+//   projetThree.classList.remove("opac");
+//   projetFour.classList.remove("opac");
 // });
-
 // projetThree.addEventListener("mouseenter", function () {
 //   projetOne.classList.add("opac");
 //   projetTwo.classList.add("opac");
 //   projetFour.classList.add("opac");
 // });
 // projetThree.addEventListener("mouseleave", function () {
-//   if (modalCrea.classList.contains("flex") === false) {
-//     projetOne.classList.remove("opac");
-//     projetTwo.classList.remove("opac");
-//     projetFour.classList.remove("opac");
-//   }
+//   projetOne.classList.remove("opac");
+//   projetTwo.classList.remove("opac");
+//   projetFour.classList.remove("opac");
 // });
 // projetFour.addEventListener("mouseenter", function () {
 //   projetOne.classList.add("opac");
@@ -69,45 +79,11 @@ const dekstopNavModale = document.querySelector("header");
 //   projetThree.classList.add("opac");
 // });
 // projetFour.addEventListener("mouseleave", function () {
-//   if (modalBoots.classList.contains("flex") === false) {
-//     projetOne.classList.remove("opac");
-//     projetTwo.classList.remove("opac");
-//     projetThree.classList.remove("opac");
-//   }
+//   projetOne.classList.remove("opac");
+//   projetTwo.classList.remove("opac");
+//   projetThree.classList.remove("opac");
 // });
 
-
-// function focus() {
-//   if (modalPop.classList.contains("flex") === true) {
-//     btnAllo.classList.add("opac");
-//     btnCrea.classList.add("opac");
-//     btnBoots.classList.add("opac");
-
-//   }
-//   if (modalAllo.classList.contains("flex") === true) {
-//     btnPop.classList.add("opac");
-//     btnCrea.classList.add("opac");
-//     btnBoots.classList.add("opac");
-
-//   }
-//   if (modalCrea.classList.contains("flex") === true) {
-//     btnPop.classList.add("opac");
-//     btnAllo.classList.add("opac");
-//     btnBoots.classList.add("opac");
-
-//   }
-//   if (modalBoots.classList.contains("flex") === true) {
-//     btnPop.classList.add("opac");
-//     btnAllo.classList.add("opac");
-//     btnCrea.classList.add("opac");
-
-//   } else {
-//     btnPop.classList.remove("opac");
-//     btnAllo.classList.remove("opac");
-//     btnCrea.classList.remove("opac");
-//     btnBoots.classList.remove("opac");
-//   }
-// }
 
 closeModalePop.addEventListener("click", function () {
   modalPop.classList.toggle("flex");
@@ -115,183 +91,7 @@ closeModalePop.addEventListener("click", function () {
   containerProject.classList.remove("scaleTranslate");
   dekstopNavModale.classList.remove("dekstopNavModale");
   dekstopNavModale.classList.remove("scaleTranslate");
-});
-// closeModaleAllo.addEventListener("click", function () {
-//   modalAllo.classList.toggle("flex");
-//   modalAllo.classList.toggle("displayNone");
-//   containerProject.classList.remove("scaleTranslate");
-//   dekstopNavModale.classList.remove("dekstopNavModale");
-//   dekstopNavModale.classList.remove("scaleTranslate");
-// });
-// closeModaleCrea.addEventListener("click", function () {
-//   modalCrea.classList.toggle("flex");
-//   modalCrea.classList.toggle("displayNone");
-//   containerProject.classList.remove("scaleTranslate");
-//   dekstopNavModale.classList.remove("dekstopNavModale");
-//   dekstopNavModale.classList.remove("scaleTranslate");
-// });
-// closeModaleBoots.addEventListener("click", function () {
-//   modalBoots.classList.toggle("flex");
-//   modalBoots.classList.toggle("displayNone");
-//   containerProject.classList.remove("scaleTranslate");
-//   dekstopNavModale.classList.remove("dekstopNavModale");
-//   dekstopNavModale.classList.remove("scaleTranslate");
-// });
-
-// btnPop.addEventListener("click", () => {
-//   modalPop.classList.toggle("flex");
-//   modalPop.classList.toggle("displayNone");
-//   modalPop.classList.add("opacfull");
-//   modalCrea.classList.add("displayNone");
-//   modalAllo.classList.add("displayNone");
-//   modalCrea.classList.remove("flex");
-//   modalAllo.classList.remove("flex");
-//   modalBoots.classList.add("displayNone");
-//   modalBoots.classList.remove("flex");
-//   focus();
-//   if (modalPop.classList.contains("flex") === true) {
-//     containerProject.classList.add("scaleTranslate");
-//     dekstopNavModale.classList.remove("dekstopNav");
-//     dekstopNavModale.classList.add("dekstopNavModale");
-//     dekstopNavModale.classList.add("scaleTranslate");
-//   } else {
-//     containerProject.classList.remove("scaleTranslate");
-//     dekstopNavModale.classList.remove("dekstopNavModale");
-//     dekstopNavModale.classList.add("dekstopNav");
-//     dekstopNavModale.classList.remove("scaleTranslate");
-//   }
-//   setTimeout(function () {
-//     modalPop.classList.remove("opacfull");
-//   }, 500);
-// });
-
-// btnAllo.addEventListener("click", function () {
-//   modalAllo.classList.toggle("flex");
-//   modalAllo.classList.toggle("displayNone");
-//   modalAllo.classList.add("opacfull");
-//   modalPop.classList.add("displayNone");
-//   modalCrea.classList.add("displayNone");
-//   modalPop.classList.remove("flex");
-//   modalCrea.classList.remove("flex");
-//   modalBoots.classList.add("displayNone");
-//   modalBoots.classList.remove("flex");
-//   focus();
-//   if (modalAllo.classList.contains("flex") === true) {
-//     containerProject.classList.add("scaleTranslate");
-//     dekstopNavModale.classList.remove("dekstopNav");
-//     dekstopNavModale.classList.add("dekstopNavModale");
-//     dekstopNavModale.classList.add("scaleTranslate");
-//   } else {
-//     containerProject.classList.remove("scaleTranslate");
-//     dekstopNavModale.classList.remove("dekstopNavModale");
-//     dekstopNavModale.classList.add("dekstopNav");
-//     dekstopNavModale.classList.remove("scaleTranslate");
-//   }
-//   setTimeout(function () {
-//     modalAllo.classList.remove("opacfull");
-//   }, 500);
-// });
-// btnCrea.addEventListener("click", function () {
-//   modalCrea.classList.toggle("flex");
-//   modalCrea.classList.toggle("displayNone");
-//   modalCrea.classList.add("opacfull");
-//   modalPop.classList.add("displayNone");
-//   modalAllo.classList.add("displayNone");
-//   modalPop.classList.remove("flex");
-//   modalAllo.classList.remove("flex");
-//   modalBoots.classList.add("displayNone");
-//   modalBoots.classList.remove("flex");
-//   focus();
-//   if (modalCrea.classList.contains("flex") === true) {
-//     containerProject.classList.add("scaleTranslate");
-//     dekstopNavModale.classList.remove("dekstopNav");
-//     dekstopNavModale.classList.add("dekstopNavModale");
-//     dekstopNavModale.classList.add("scaleTranslate");
-//   } else {
-//     containerProject.classList.remove("scaleTranslate");
-//     dekstopNavModale.classList.remove("dekstopNavModale");
-//     dekstopNavModale.classList.add("dekstopNav");
-//     dekstopNavModale.classList.remove("scaleTranslate");
-//   }
-//   setTimeout(function () {
-//     modalCrea.classList.remove("opacfull");
-//   }, 500);
-// });
-// btnBoots.addEventListener("click", function () {
-//   modalAllo.classList.remove("flex");
-//   modalAllo.classList.add("displayNone");
-//   modalPop.classList.add("displayNone");
-//   modalCrea.classList.add("displayNone");
-//   modalPop.classList.remove("flex");
-//   modalCrea.classList.remove("flex");
-//   modalBoots.classList.toggle("flex");
-//   modalBoots.classList.toggle("displayNone");
-//   modalBoots.classList.add("opacfull");
-//   if (modalBoots.classList.contains("flex") === true) {
-//     containerProject.classList.add("scaleTranslate");
-//     dekstopNavModale.classList.remove("dekstopNav");
-//     dekstopNavModale.classList.add("dekstopNavModale");
-//     dekstopNavModale.classList.add("scaleTranslate");
-//     focus();
-//   } else {
-//     containerProject.classList.remove("scaleTranslate");
-//     dekstopNavModale.classList.remove("dekstopNavModale");
-//     dekstopNavModale.classList.add("dekstopNav");
-//     dekstopNavModale.classList.remove("scaleTranslate");
-//   }
-//   setTimeout(function () {
-//     modalBoots.classList.remove("opacfull");
-//   }, 500);
-// });
-
-
-
-
-// ****** sliders*******
-// var slider = tns({
-//   container: ".my-sliderPop",
-//   items: 1,
-//   gutter: 5,
-//   mouseDrag: true,
-//   swipeAngle: false,
-//   speed: 400,
-//   controlsText: ["<", ">"],
-//   controlsPosition: "bottom",
-//   loop: true,
-// });
-// var slider = tns({
-//   container: ".my-sliderAllo",
-//   items: 1,
-//   gutter: 5,
-//   mouseDrag: true,
-//   swipeAngle: false,
-//   speed: 400,
-//   controlsText: ["<", ">"],
-//   controlsPosition: "bottom",
-//   loop: true,
-// });
-// var slider = tns({
-//   container: ".my-sliderCreat",
-//   items: 1,
-//   gutter: 5,
-//   mouseDrag: true,
-//   swipeAngle: false,
-//   speed: 400,
-//   controlsText: ["<", ">"],
-//   controlsPosition: "bottom",
-//   loop: true,
-// });
-// var slider = tns({
-//   container: ".my-sliderBoots",
-//   items: 1,
-//   gutter: 5,
-//   mouseDrag: true,
-//   swipeAngle: false,
-//   speed: 400,
-//   controlsText: ["<", ">"],
-//   controlsPosition: "bottom",
-//   loop: true,
-// });
+})
 
 //**** */ effets 3d ****
 var ztxt = new Ztextify(".name", {
@@ -477,6 +277,7 @@ const cursorTuning = () => {
     });
   });
 }
+
 cursorTuning();
 
 // rubrique contact form
@@ -487,24 +288,16 @@ contactBtn.addEventListener("click", function () {
   contactForm.classList.toggle("displayNone");
 });
 
-function closeAllIfModalOpen() {
-  for (let i = 0; i < allModal.length; i++) {
-    if (allModal[i].classList.contains("flex")) {
-      home.classList.add("displayNone");
-    } else {
-      home.classList.remove("displayNone");
-    }
+function closeModalOpen() {
+  if (modal.classList.contains("flex")) {
+    home.classList.add("displayNone");
+  } else {
+    home.classList.remove("displayNone");
   }
 }
-closeAllIfModalOpen();
+closeModalOpen();
 
-// modal à remplir avec json
-const modalTitle = document.querySelector(".modalTitle");
-const modalImg = document.querySelector(".modalImg");
-const modalDesc = document.querySelectorAll(".modalDesc");
-const modalGit = document.querySelector(".modalGit")
-const modalLink = document.querySelector(".modalLink");
-const modalBtn = document.querySelectorAll(".containerProject > h3");
+
 
 // ******* construction des modales projets depuis JSON **************
 async function getProject() {
