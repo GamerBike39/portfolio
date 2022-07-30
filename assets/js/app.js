@@ -103,12 +103,8 @@ btnAbout.addEventListener("click", function () {
   about.classList.toggle("displayNone");
   header.classList.remove("dekstopNav");
   header.classList.toggle("popNav");
-  for (let i = 0; i < allModal.length; i++) {
-    allModal[i].classList.add("displayNone");
-    allModal[i].classList.remove("flex");
-    header.classList.add("popNav");
-    header.classList.remove("scaleTranslate");
-  }
+  header.classList.add("popNav");
+  header.classList.remove("scaleTranslate");
 });
 
 quiBtn.addEventListener("click", function () {
@@ -161,60 +157,14 @@ new ResizeObserver((entries) => {
     containerExp.classList.remove("flex");
     containerSkill.classList.remove("flex");
     containerQui.classList.remove("flex");
-    btnPop.addEventListener("click", () => {
-      modalPop.classList.add("opacfull");
-      header.classList.add("displayNone");
-      containerProject.classList.add("displayNone");
-      setTimeout(function () {
-        modalPop.classList.remove("opacfull");
-      }, 500);
-    });
-
-    btnAllo.addEventListener("click", function () {
-      modalAllo.classList.add("opacfull");
-      header.classList.add("displayNone");
-      containerProject.classList.add("displayNone");
-      setTimeout(function () {
-        modalAllo.classList.remove("opacfull");
-      }, 500);
-    });
-    btnCrea.addEventListener("click", function () {
-      modalCrea.classList.add("opacfull");
-      header.classList.add("displayNone");
-      containerProject.classList.add("displayNone");
-      setTimeout(function () {
-        modalCrea.classList.remove("opacfull");
-      }, 500);
-    });
-    btnBoots.addEventListener("click", function () {
-      modalBoots.classList.add("opacfull");
-      header.classList.add("displayNone");
-      containerProject.classList.add("displayNone");
-      setTimeout(function () {
-        modalBoots.classList.remove("opacfull");
-      }, 500);
-    });
-    closeModalePop.addEventListener("click", function () {
-      header.classList.remove("displayNone");
-      containerProject.classList.remove("displayNone");
-    });
-    closeModaleAllo.addEventListener("click", function () {
-      header.classList.remove("displayNone");
-      containerProject.classList.remove("displayNone");
-    });
-    closeModaleCrea.addEventListener("click", function () {
-      header.classList.remove("displayNone");
-      containerProject.classList.remove("displayNone");
-    });
-    closeModaleBoots.addEventListener("click", function () {
-      header.classList.remove("displayNone");
-      containerProject.classList.remove("displayNone");
-    });
+    return;
+  }
+  if (modal.classList.contains("flex") === true) {
+    containerProject.classList.add("displayNone");
+    dekstopNavModale.classList.add("displayNone");
   } else {
-    containerQui.classList.add("flex");
-    containerSkill.classList.add("flex");
-    containerExp.classList.add("flex");
-    containerHobbie.classList.add("flex");
+    containerProject.classList.remove("displayNone");
+    dekstopNavModale.classList.remove("displayNone");
   }
 }).observe(document.body);
 
