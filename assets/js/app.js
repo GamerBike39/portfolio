@@ -109,13 +109,13 @@ const dekstopNavModale = document.querySelector("header");
 //   }
 // }
 
-// closeModalePop.addEventListener("click", function () {
-//   modalPop.classList.toggle("flex");
-//   modalPop.classList.toggle("displayNone");
-//   containerProject.classList.remove("scaleTranslate");
-//   dekstopNavModale.classList.remove("dekstopNavModale");
-//   dekstopNavModale.classList.remove("scaleTranslate");
-// });
+closeModalePop.addEventListener("click", function () {
+  modalPop.classList.toggle("flex");
+  modalPop.classList.toggle("displayNone");
+  containerProject.classList.remove("scaleTranslate");
+  dekstopNavModale.classList.remove("dekstopNavModale");
+  dekstopNavModale.classList.remove("scaleTranslate");
+});
 // closeModaleAllo.addEventListener("click", function () {
 //   modalAllo.classList.toggle("flex");
 //   modalAllo.classList.toggle("displayNone");
@@ -248,17 +248,17 @@ const dekstopNavModale = document.querySelector("header");
 
 
 // ****** sliders*******
-var slider = tns({
-  container: ".my-sliderPop",
-  items: 1,
-  gutter: 5,
-  mouseDrag: true,
-  swipeAngle: false,
-  speed: 400,
-  controlsText: ["<", ">"],
-  controlsPosition: "bottom",
-  loop: true,
-});
+// var slider = tns({
+//   container: ".my-sliderPop",
+//   items: 1,
+//   gutter: 5,
+//   mouseDrag: true,
+//   swipeAngle: false,
+//   speed: 400,
+//   controlsText: ["<", ">"],
+//   controlsPosition: "bottom",
+//   loop: true,
+// });
 // var slider = tns({
 //   container: ".my-sliderAllo",
 //   items: 1,
@@ -316,17 +316,17 @@ const containerExp = document.querySelector(".containerMyExp");
 const containerHobbie = document.querySelector(".containerHobbies");
 const home = document.querySelector(".home");
 
-// btnAbout.addEventListener("click", function () {
-//   about.classList.toggle("displayNone");
-//   header.classList.remove("dekstopNav");
-//   header.classList.toggle("popNav");
-//   for (let i = 0; i < allModal.length; i++) {
-//     allModal[i].classList.add("displayNone");
-//     allModal[i].classList.remove("flex");
-//     header.classList.add("popNav");
-//     header.classList.remove("scaleTranslate");
-//   }
-// });
+btnAbout.addEventListener("click", function () {
+  about.classList.toggle("displayNone");
+  header.classList.remove("dekstopNav");
+  header.classList.toggle("popNav");
+  for (let i = 0; i < allModal.length; i++) {
+    allModal[i].classList.add("displayNone");
+    allModal[i].classList.remove("flex");
+    header.classList.add("popNav");
+    header.classList.remove("scaleTranslate");
+  }
+});
 
 quiBtn.addEventListener("click", function () {
   containerQui.classList.toggle("displayNone");
@@ -506,17 +506,32 @@ const modalBtn = document.querySelectorAll(".containerProject > h3");
 async function getProject() {
   const response = await fetch("assets/json/project.json");
   const data = await response.json();
-  console.log(data, data[0].title, data[0].desc);
   for (let i = 0; i < data.length; i++) {
-    modalBtn[i].innerHTML = data[i].title;
+    // modalBtn[i].innerHTML = data[i].title;
     modalBtn[i].addEventListener("click", function () {
+      home.classList.add("scaleTranslate");
+      dekstopNavModale.classList.add("dekstopNavModale");
       if (data[i].title === modalBtn[i].textContent) {
         modal.classList.add("flex");
+        modal.classList.remove("displayNone");
         modalTitle.innerHTML = data[i].title;
-        modalImg.src = data[i].img;
+        modalImg.innerHTML = `  <div class="my-sliderPop">
+        ${data[i].img}
+    </div>`
         modalDesc[0].innerHTML = data[i].desc;
         modalGit.innerHTML = data[i].git;
         modalLink.href = data[i].link;
+        var slider = tns({
+          container: ".my-sliderPop",
+          items: 1,
+          gutter: 5,
+          mouseDrag: true,
+          swipeAngle: false,
+          speed: 400,
+          controlsText: ["<", ">"],
+          controlsPosition: "bottom",
+          loop: true,
+        });
         return;
       }
     });
