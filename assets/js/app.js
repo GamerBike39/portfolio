@@ -16,76 +16,27 @@ const modalDesc = document.querySelectorAll(".modalDesc");
 const modalGit = document.querySelector(".modalGit")
 const modalLink = document.querySelector(".modalLink");
 const modalBtn = document.querySelectorAll(".containerProject > h3");
-// ********* mouse enter and leave events ***********
-
-
-
-
-
-
-// projetOne.addEventListener("mouseenter", function () {
-//   projetTwo.classList.add("opac");
-//   projetThree.classList.add("opac");
-//   projetFour.classList.add("opac");
-// });
-// projetOne.addEventListener("mouseleave", function () {
-//   projetTwo.classList.remove("opac");
-//   projetThree.classList.remove("opac");
-//   projetFour.classList.remove("opac");
-// });
-// projetTwo.addEventListener("mouseenter", function () {
-//   projetOne.classList.add("opac");
-//   projetThree.classList.add("opac");
-//   projetFour.classList.add("opac");
-// });
-// projetTwo.addEventListener("mouseleave", function () {
-//   projetOne.classList.remove("opac");
-//   projetThree.classList.remove("opac");
-//   projetFour.classList.remove("opac");
-// });
-// projetThree.addEventListener("mouseenter", function () {
-//   projetOne.classList.add("opac");
-//   projetTwo.classList.add("opac");
-//   projetFour.classList.add("opac");
-// });
-// projetThree.addEventListener("mouseleave", function () {
-//   projetOne.classList.remove("opac");
-//   projetTwo.classList.remove("opac");
-//   projetFour.classList.remove("opac");
-// });
-// projetFour.addEventListener("mouseenter", function () {
-//   projetOne.classList.add("opac");
-//   projetTwo.classList.add("opac");
-//   projetThree.classList.add("opac");
-// });
-// projetFour.addEventListener("mouseleave", function () {
-//   projetOne.classList.remove("opac");
-//   projetTwo.classList.remove("opac");
-//   projetThree.classList.remove("opac");
-// });
-
 
 const closeModale = function () {
   closeModalePop.addEventListener("click", function () {
-    modal.classList.toggle("flex");
     modal.classList.toggle("displayNone");
     containerProject.classList.remove("scaleTranslate");
     modalBtn.forEach((item) => {
       item.classList.remove("opac", "active");
     })
-    dekstopNavModale.classList.remove("dekstopNavModale");
-    dekstopNavModale.classList.remove("scaleTranslate");
+    dekstopNavModale.classList.remove("dekstopNavModale", "scaleTranslate");
   })
 };
 closeModale();
 
 //**** */ effets 3d ****
 const ztxt = new Ztextify(".name", {
-  depth: "3px",
+  depth: "5px",
   layers: 8,
   event: "pointer",
   eventRotation: "10deg",
 });
+
 
 // *************** About ****************************
 
@@ -104,11 +55,17 @@ const home = document.querySelector(".home");
 
 btnAbout.addEventListener("click", function () {
   about.classList.toggle("displayNone");
-  header.classList.remove("dekstopNav");
-  header.classList.toggle("popNav");
+  header.classList.remove("dekstopNav", "scaleTranslate");
+  // header.classList.toggle("popNav");
   header.classList.add("popNav");
-  header.classList.remove("scaleTranslate");
-});
+  modal.classList.add("displayNone");
+  containerProject.classList.remove("scaleTranslate");
+  modalBtn.forEach((item) => {
+    item.classList.remove("opac", "active");
+  })
+  dekstopNavModale.classList.remove("dekstopNavModale", "scaleTranslate");
+})
+
 
 quiBtn.addEventListener("click", function () {
   containerQui.classList.toggle("displayNone");
@@ -154,6 +111,7 @@ btnHobbie.addEventListener("click", function () {
   header.classList.remove("scaleTranslate");
 });
 
+// ******** responsive *******************
 new ResizeObserver((entries) => {
   if (entries[0].contentRect.width <= 400) {
     containerHobbie.classList.remove("flex");
@@ -221,17 +179,13 @@ const contactForm = document.querySelector(".containerContact");
 
 contactBtn.addEventListener("click", function () {
   contactForm.classList.toggle("displayNone");
+  modal.classList.toggle("displayNone");
+  containerProject.classList.remove("scaleTranslate");
+  modalBtn.forEach((item) => {
+    item.classList.remove("opac", "active");
+  })
+  dekstopNavModale.classList.remove("dekstopNavModale", "scaleTranslate");
 });
-
-function closeModalOpen() {
-  if (modal.classList.contains("flex")) {
-    home.classList.add("displayNone");
-  } else {
-    home.classList.remove("displayNone");
-  }
-}
-closeModalOpen();
-
 
 // *****caroussele******
 const caroussele = () => {
@@ -252,11 +206,7 @@ const caroussele = () => {
 
 // ***** anim btn modal ****
 const modalBtnActive = () => {
-
   for (let i = 0; i < modalBtn.length; i++) {
-    if (containerProject.classList.contains("scaleTranslate") === false) {
-      modalBtn[i].classList.remove("opac");
-    }
     modalBtn[i].addEventListener("click", function () {
       for (let j = 0; j < modalBtn.length; j++) {
         modalBtn[j].classList.add("opac");
@@ -265,8 +215,8 @@ const modalBtnActive = () => {
     });
   }
 }
-
 modalBtnActive();
+// *****************************************
 // ******* construction des modales projets depuis JSON **************
 async function getProject() {
   const response = await fetch("assets/json/project.json");

@@ -109,6 +109,12 @@ ul {
     gap: 5px;
 }
 
+.desktopNav>span {
+    margin-left: 25px;
+    gap: 5px;
+}
+
+
 .dekstopNavModale {
     position: fixed;
     bottom: -116px;
@@ -128,6 +134,7 @@ ul {
     font-weight: 800;
     margin-left: 40px;
     cursor: none;
+    color: #ffffff;
 }
 
 .namePop {
