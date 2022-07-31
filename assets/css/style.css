@@ -49,6 +49,16 @@
     transform: scale(0.8) translate(14rem, -10rem);
 }
 
+#defaultCanvas0 {
+    width: 1920px;
+    height: 919px;
+    position: fixed;
+    top: 0;
+    z-index: -3;
+    opacity: 0.5;
+}
+
+
 /* ********************************* */
 body {
     margin: 0;
@@ -58,7 +68,7 @@ body {
     font-family: 'Roboto Flex', sans-serif;
     scroll-behavior: smooth;
     transition: all 0.3s ease-in-out;
-    cursor: none;
+    /* cursor: none; */
     overflow-x: hidden;
     background: #002147;
 }
@@ -91,7 +101,7 @@ body::-webkit-scrollbar {
 a {
     text-decoration: none;
     color: aliceblue;
-    cursor: none;
+    cursor: pointer;
 }
 
 ul {
@@ -170,7 +180,7 @@ ul {
     transform-style: preserve-3d;
     transition: all 0.5s ease-in-out;
     transform-origin: center right;
-    /* cursor: pointer; */
+    cursor: pointer;
     position: relative;
     -webkit-text-stroke: 5px;
     /* margin-bottom: 10px; */
@@ -185,7 +195,7 @@ ul {
     transform-style: preserve-3d;
     transition: all 0.5s ease-in-out;
     transform-origin: center right;
-    /* cursor: pointer; */
+    cursor: pointer;
     position: relative;
     -webkit-text-stroke: 5px;
 }
@@ -199,7 +209,7 @@ ul {
     transform-style: preserve-3d;
     transition: all 0.5s ease-in-out;
     transform-origin: center right;
-    /* cursor: pointer; */
+    cursor: pointer;
     position: relative;
     -webkit-text-stroke: 5px;
 }
@@ -213,7 +223,7 @@ ul {
     transform-style: preserve-3d;
     transition: all 0.5s ease-in-out;
     transform-origin: center right;
-    /* cursor: pointer; */
+    cursor: pointer;
     position: relative;
     -webkit-text-stroke: 5px;
 }
@@ -318,7 +328,7 @@ ul {
     position: absolute;
     top: 10px;
     right: 10px;
-    /* cursor: pointer; */
+    cursor: pointer;
 }
 
 .modal h4 {
