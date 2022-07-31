@@ -1,7 +1,3 @@
-const projetOne = document.querySelector(".containerProject > h3:nth-child(1)");
-const projetTwo = document.querySelector(".containerProject > h3:nth-child(2)");
-const projetThree = document.querySelector(".containerProject > h3:nth-child(3)");
-const projetFour = document.querySelector(".containerProject > h3:nth-child(4)");
 // ****modale****
 const btnPop = document.querySelector(".btn-modalPop");
 const modalBoots = document.querySelector(".modalBoots");
@@ -178,7 +174,7 @@ const contactBtn = document.querySelector(".contactBtn");
 const contactForm = document.querySelector(".containerContact");
 
 contactBtn.addEventListener("click", function () {
-  contactForm.classList.toggle("displayNone");
+  contactForm.classList.remove("displayNone");
   modal.classList.toggle("displayNone");
   containerProject.classList.remove("scaleTranslate");
   modalBtn.forEach((item) => {
