@@ -69,10 +69,10 @@
         </header>
 
         <div class="containerProject">
-            <h3 class="btn-modalPop rubrique">POPCODE</h3>
-            <h3 class="btn-modalAllo">ALLOJYVE</h3>
-            <h3 class="btn-modalCrea">CREATIVES</h3>
-            <h3 class="btn-modalBoots">CAPGEMEN</h3>
+            <h3 class="btn-modalPop" aria-checked="false" type="checkbox" >POPCODE</h3>
+            <h3 class="btn-modalAllo" aria-checked="false" type="checkbox">ALLOJYVE</h3>
+            <h3 class="btn-modalCrea" aria-checked="false" type="checkbox">CREATIVES</h3>
+            <h3 class="btn-modalBoots"aria-checked="false" type="checkbox" >CAPGEMEN</h3>
         </div>
     </div>
 
@@ -92,7 +92,7 @@
         </div>
     </div>
 
-    <div id="apropos" class="containerAbout displayNone">
+    <div id="apropos" class="containerAbout flex displayNone">
         <div class="flex containerRubrique">
             <h4>À propos de moi</h4>
             <a href="#qui" class="qui">
@@ -233,7 +233,6 @@ if(isset($_POST['nom']) && isset($_POST['email']) && isset($_POST['message'])){
 }
 ?> 
 
-    ?>
     <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
     <script src="assets/js/ztext.min.js"></script>
     <script src="assets/js/tiny-slider.js"></script>

@@ -159,7 +159,7 @@ new ResizeObserver((entries) => {
     containerQui.classList.remove("flex");
     return;
   }
-  if (modal.classList.contains("flex") === true) {
+  if (modal.classList.contains("flex") === true && entries[0].contentRect.width <= 400) {
     containerProject.classList.add("displayNone");
     dekstopNavModale.classList.add("displayNone");
   } else {
@@ -235,28 +235,40 @@ const caroussele = () => {
   let slider = tns({
     container: ".my-slider",
     items: 1,
-    gutter: 5,
+    gutter: 1,
     mouseDrag: true,
-    swipeAngle: false,
-    speed: 400,
+    speed: 1000,
+    navAsThumbnails: true,
+    swipeAngle: true,
+    autoplayTimeout: 3000,
     controlsText: ["<", ">"],
-    controlsPosition: "bottom",
+    controlsPosition: "center",
     loop: true,
   });
 }
+
+// ***** anim btn modal ****
 
 // ******* construction des modales projets depuis JSON **************
 async function getProject() {
   const response = await fetch("assets/json/project.json");
   const data = await response.json();
   for (let i = 0; i < data.length; i++) {
-    if (modalBtn[i].textContent != data[i].title) {
-      modalBtn[i].classList.add("opac");
-    }
     modalBtn[i].addEventListener("click", function () {
+      window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: 'smooth'
+      });
       containerProject.classList.add("scaleTranslate");
       dekstopNavModale.classList.add("dekstopNavModale", "scaleTranslate");
+
+      modalBtn[i].ariaChecked = "false";
+      modalBtn[i].classList.add("opac");
       if (data[i].title === modalBtn[i].textContent) {
+        modalBtn[i].ariaChecked = "true";
+        modalBtn[i].classList.remove("opac")
+        console.log(modalBtn[i]);
         // modalBtn[i].classList.remove("opac");
         modal.classList.add("flex");
         modal.classList.remove("displayNone");
@@ -270,6 +282,15 @@ async function getProject() {
         modalLink.href = data[i].link;
         caroussele();
       }
+
+      if (data[i].title === modalBtn[i].textContent && modal.classList.contains("flex")) {
+        modalBtn[i].ariaChecked = "true";
+        modalBtn[i].classList.remove("opac");
+      } else {
+        modalBtn[i].ariaChecked = "false";
+        modalBtn[i].classList.add("opac");
+      }
+
     });
   }
 }
