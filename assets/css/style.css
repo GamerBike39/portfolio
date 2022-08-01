@@ -51,7 +51,7 @@
 
 #defaultCanvas0 {
     width: 1920px;
-    height: 919px;
+    height: 950px;
     position: fixed;
     top: 0;
     z-index: -3;
@@ -78,13 +78,13 @@ body::-webkit-scrollbar {
     width: 3px;
 }
 
-/* .smoke {
-    position: fixed;
-    min-height: 100vh;
-    width: 100vw;
-    opacity: 0.03;
-    z-index: -1;
-} */
+
+.btn {
+    width: 18%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 
 .z-text {
     cursor: none;
@@ -415,7 +415,7 @@ ul {
     border-radius: 5px;
     /* cursor: pointer; */
     position: absolute;
-    top: 25%;
+    top: 33%;
     right: 10px;
     color: #ffdeb8;
 }
@@ -428,7 +428,7 @@ ul {
     border-radius: 5px;
     /* cursor: pointer; */
     position: absolute;
-    top: 25%;
+    top: 33%;
     color: #ffdeb8;
 }
 
@@ -921,6 +921,10 @@ div.form-group:nth-child(1)>label:nth-child(1) {
         width: 66vw;
     }
 
+    .btn {
+        width: 25%;
+    }
+
     .formulaire>form:nth-child(1) {
         gap: 5px;
     }
@@ -933,6 +937,10 @@ div.form-group:nth-child(1)>label:nth-child(1) {
 
     .containerContact>h4 {
         font-size: 21vw;
+    }
+
+    #defaultCanvas0 {
+        display: none;
     }
 
 }
