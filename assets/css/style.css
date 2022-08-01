@@ -144,7 +144,7 @@ ul {
     font-size: 3.5rem;
     font-weight: 800;
     margin-left: 40px;
-    cursor: none;
+    /* cursor: none; */
     color: #ffffff;
 }
 
@@ -157,7 +157,7 @@ ul {
 
 .contact a {
     fill: white;
-    cursor: none;
+    /* cursor: none; */
 }
 
 .containerProject {
@@ -590,7 +590,7 @@ ul {
 
 
 /* custom Cursor */
-.cursor {
+/* .cursor {
     width: 50px;
     height: 50px;
     border-radius: 100%;
@@ -615,9 +615,9 @@ ul {
     pointer-events: none;
     transition: width .3s, height .3s, opacity .3s;
     z-index: 5;
-}
+} */
 
-.hover {
+/* .hover {
     background-color: rgb(11, 55, 247);
     opacity: 0.5;
 }
@@ -626,7 +626,7 @@ ul {
     width: 50px;
     height: 50px;
     opacity: .5;
-}
+} */
 
 /* contact formulaire */
 .containerContact {
@@ -707,10 +707,10 @@ div.form-group:nth-child(1)>label:nth-child(1) {
 /* media querries */
 @media screen and (max-width: 500px) {
 
-    .cursor,
+    /* .cursor,
     .cursor2 {
         display: none;
-    }
+    } */
 
     body {
         cursor: inherit;
