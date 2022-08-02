@@ -952,8 +952,8 @@ div.form-group:nth-child(1)>label:nth-child(1) {
         font-size: 21vw;
     }
 
-    #defaultCanvas0 {
+    /* #defaultCanvas0 {
         display: none;
-    }
+    } */
 
 }
