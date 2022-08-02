@@ -188,15 +188,12 @@ const caroussele = () => {
   let slider = tns({
     container: ".my-slider",
     items: 1,
-    gutter: 1,
-    mouseDrag: true,
-    speed: 1000,
-    navAsThumbnails: true,
-    swipeAngle: true,
-    autoplayTimeout: 3000,
-    controlsText: ["<", ">"],
+    speed: 10,
+    controlsText: [" <", "> "],
     controlsPosition: "center",
-    loop: true,
+    loop: false,
+    swipeAngle: false,
+    mouseDrag: false,
   });
 }
 
