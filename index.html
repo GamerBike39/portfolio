@@ -202,10 +202,10 @@
             <h4>Contact</h4>
             <p>Si vous avez un projet ou une idée, contactez-moi !</p>
             <div class="formulaire">
-                <form method="post">
+                <form method="post" action="contact.php">
                     <div class="form-group">
                         <label for="nom">Nom</label>
-                        <input type="text" class="form-control" id="nom" name="nom" placeholder="Votre Nom" required>
+                        <input type="text" class="form-control" id="nom" name="nom" placeholder="Votre nom et prénom" required>
                     </div>
                     <div class="form-group">
                         <label for="email">Email</label>
@@ -216,7 +216,7 @@
                         <textarea class="form-control" id="message" name="message" rows="3"
                             placeholder="Votre message" required></textarea>
                     </div>
-                    <button id="#sendEmail" type="submit" onclick="sendData({test:'ok'})" class="btn">Envoyer</button>
+                    <button  type="submit" onclick="sendData({test:'ok'})" class="btn">Envoyer</button>
                 </form>
             </div>
             <span class="reponseEnvoie"></span>
@@ -234,18 +234,13 @@ if(isset($_POST['nom']) && isset($_POST['email']) && isset($_POST['message'])){
     mail($to, $subject, $body, $headers);
 }
 ?>
-<?php
-if(isset($_POST['nom']) && isset($_POST['email']) && isset($_POST['message'])){
-    echo "Votre message a bien été envoyé !";
-}
-?> 
 
     <!-- <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script> -->
     <script src="assets/js/ztext.min.js"></script>
+    <script src="assets/js/mailSend.js"></script> 
     <script src="assets/js/tiny-slider.js"></script>
     <script src=" https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.10.2/p5.min.js"></script>
     <script src="assets/js/app.js"></script>
-    <script src="assets/js/mailSend.js"></script> 
 </body>
 
 </html>

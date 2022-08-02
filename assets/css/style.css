@@ -701,6 +701,19 @@ div.form-group:nth-child(1)>label:nth-child(1) {
     padding-right: 14px;
 }
 
+.validation {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #FFDEB8;
+    font-size: 3vw;
+    transform: translateY(-7%);
+}
+
+
 
 
 
