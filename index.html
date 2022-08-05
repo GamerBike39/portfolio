@@ -14,7 +14,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <title>Portfolio</title>
 </head>
 
@@ -216,10 +215,15 @@
                         <textarea class="form-control" id="message" name="message" rows="3"
                             placeholder="Votre message" required></textarea>
                     </div>
-                    <button  type="submit" onclick="sendData({test:'ok'})" class="btn">Envoyer</button>
+                    <!-- <button  type="submit" onclick="sendData({test:'ok'})" class="btn">Envoyer</button> -->
+                    <button type="submit" onclick="sendData({test:'ok'})" class="btn">
+                        <span class="shadow"></span>
+                        <span class="edge"></span>
+                        <span class="front text">Envoyer</span>
+                      </button>
+                      <span class="reponseEnvoie"></span>
                 </form>
             </div>
-            <span class="reponseEnvoie"></span>
         </div>
     </div>
     <?php

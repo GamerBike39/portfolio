@@ -191,7 +191,7 @@ const caroussele = () => {
     speed: 10,
     controlsText: [" <", "> "],
     controlsPosition: "center",
-    loop: false,
+    loop: true,
     swipeAngle: false,
     mouseDrag: false,
   });
