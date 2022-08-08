@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div class="validation">
+        <h3>Merci pour votre message !</h3>
+        <h4>Nous vous répondrons dans les plus brefs délais.</h4>
+        <a href="index.php">Retour à l'accueil</a>
+    </div>
+    <?php
+    if(isset($_POST['nom']) && isset($_POST['email']) && isset($_POST['message'])){
+        $nom = $_POST['nom'];
+        $email = $_POST['email'];
+        $message = $_POST['message'];
+        $to = "j.mathieu@codeur.online";
+        $subject = "Message de ".$nom;
+        $body = $message;
+        $headers = "From: ".$email;
+        mail($to, $subject, $body, $headers);
+    }
+    ?>
+    <script src="assets/js/mailSend.js"></script> 
+    <script src="assets/js/app.js"></script>
+</body>
+</html>

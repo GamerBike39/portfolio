@@ -1,0 +1,43 @@
+[
+    {
+        "title" : "POPCODE",
+        "img" :[
+            "<img src='assets/img/popIntro.jpg'>",
+            " <img src='assets/img/popAccueil.jpg'>",
+            " <img src='assets/img/popJeu.jpg'>",
+            " <img src='assets/img/popInput.jpg'>",
+            " <img src='assets/img/popInfo.jpg'>"
+             ],
+        "desc" :"<p>Projet réalisé durant ma formation Acces Code School.</p><p>PopCode est inspiré du site PopCornTv ou le but est de chercher et retrouver les références des différents langages de programmation cachés dans une illustration.</p><p>Ce projet a été réalisé en HTML5, CSS3, et Javascript.</p>",
+        "github" : "https://github.com/GamerBike39/ProjectPopCode",
+        "link" : "https://gamerbike39.github.io/ProjectPopCode/"
+    },
+    {
+        "title" : "ALLOJYVE",
+        "img" :[
+            "<img src='assets/img/allojyve-logo.jpg'>",
+            "<img src='assets/img/allojyve-accueil.jpg'>",
+            "<img src='assets/img/allojyve-modale.jpg'>"         
+        ],
+           
+        "desc" :" <p>Projet réalisé durant ma formation Access Code School.</p><p>Allojyvé est un projet qui a comme fonction d'utilisé l'API de The Movie Database, pour faire un suivie des sorties populaires, à venir, et en cours.</p><p>La contrainte de ce projet était de ne pas utiliser d'HTML et de tout générer avec Javascript</p>",
+        "github" : "https://github.com/GamerBike39/allojyve2",
+        "link" : "https://gamerbike39.github.io/allojyve2/"
+    },
+    {
+        "title" : "CREATIVES",
+        "img" :"<img src='assets/img/creativeAccueil.jpg'><img src='assets/img/creative2.jpg'><img src='assets/img/creativeAkita.jpg'>"
+             ,
+        "desc" :"<p>Projet réalisé durant ma formation Access Code School.</p><p>Allojyvé est un projet qui a comme fonction d'utilisé l'API de The Movie Database, pour faire un suivie des sorties populaires, à venir, et en cours.</p><p>La contrainte de ce projet était de ne pas utiliser d'HTML et de tout générer avec Javascript</p>",
+        "github" :"https://github.com/GamerBike39/projet-1-creative",
+        "link" : "https://gamerbike39.github.io/projet-1-creative/"
+    },
+    {
+        "title" : "CAPGEMEN",
+        "img" :" <img src='assets/img/bootstrapAccueil.jpg' alt='capture d'écran de la page d'accueil du site'><img src='assets/img/bootstrap2.jpg'><img src='assets/img/bootstrap3.jpg'>",
+        "desc" :"<p>Projet réalisé durant ma formation Access Code School.</p><p>We Take est un projet qui avait pour but de me familiariser avec le frameworks CSS Boostsrap</p><p>Le but était d'apprendre à découvrir un frameworks, lire la documentation, et utiliser le moins possible de CSS custom.</p>",
+        "github" : "https://github.com/GamerBike39/ProjectBootstrap",
+        "link" : "https://gamerbike39.github.io/ProjectBootstrap/" 
+    }
+       
+]
