@@ -820,6 +820,21 @@ button:focus:not(:focus-visible) {
     .dekstopNavModale {
         right: 147px;
     }
+
+    .containerQui,
+    .containerSkills,
+    .containerHobbies,
+    .containerMyExp {
+        width: 53%;
+    }
+
+    .tns-controls [data-controls=prev] {
+        top: 21%;
+    }
+
+    .tns-controls [data-controls=next] {
+        top: 21%;
+    }
 }
 
 @media screen and (max-width: 1200px) {
@@ -868,6 +883,34 @@ button:focus:not(:focus-visible) {
         top: -21px;
     }
 
+    .tns-controls [data-controls=prev] {
+        top: 17%;
+    }
+
+    .tns-controls [data-controls=next] {
+        top: 17%;
+    }
+
+
+
+}
+
+@media screen and (max-width: 980px) {
+
+    .containerQui,
+    .containerSkills,
+    .containerHobbies,
+    .containerMyExp {
+        width: 50%;
+    }
+
+    .tns-controls [data-controls=prev] {
+        top: 17%;
+    }
+
+    .tns-controls [data-controls=next] {
+        top: 17%;
+    }
 }
 
 
