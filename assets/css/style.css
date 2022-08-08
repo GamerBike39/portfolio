@@ -681,6 +681,7 @@ ul {
     display: flex;
     flex-direction: column;
     gap: 25px;
+    padding-top: 50px;
 }
 
 .btn-primary {
@@ -746,10 +747,10 @@ button {
     height: 100%;
     border-radius: 12px;
     background: linear-gradient(to left,
-            hsl(340deg 100% 16%) 0%,
-            hsl(340deg 100% 32%) 8%,
-            hsl(340deg 100% 32%) 92%,
-            hsl(340deg 100% 16%) 100%);
+            rgb(255, 189, 211) 0%,
+            rgb(252, 133, 173) 8%,
+            rgb(255, 208, 224) 92%,
+            rgb(255, 199, 217) 100%);
 }
 
 .front {
@@ -758,8 +759,8 @@ button {
     padding: 12px 27px;
     border-radius: 12px;
     font-size: 1.1rem;
-    color: white;
-    background: #FFDEB8;
+    color: #ffdeb8;
+    background: #33271A;
     will-change: transform;
     transform: translateY(-4px);
     transition: transform 600ms cubic-bezier(.3, .7, .4, 1);
@@ -803,8 +804,75 @@ button:focus:not(:focus-visible) {
 
 
 
+
+
 /* media querries */
-@media screen and (max-width: 500px) {
+
+@media screen and (max-width: 1400px) {
+    .scaleTranslate {
+        transform: scale(0.7) translate(14rem, -10rem);
+    }
+
+    .containerProject {
+        width: 90%;
+    }
+
+    .dekstopNavModale {
+        right: 147px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .scaleTranslate {
+        transform: scale(0.7) translate(14rem, -10rem);
+    }
+
+    .containerProject {
+        width: 90%;
+        line-height: 163px;
+    }
+
+    .dekstopNavModale {
+        right: 44px;
+    }
+
+    .containerProject>h3:nth-child(2) {
+        transform: rotateX(3deg) rotateY(326deg) translate(-13px, -45px);
+    }
+
+    .containerProject>h3:nth-child(3) {
+        transform: rotateX(3deg) rotateY(326deg) translate(25px, -45px);
+    }
+
+    .containerProject>h3:nth-child(4) {
+        transform: rotateX(3deg) rotateY(326deg) translate(35px, -45px);
+    }
+
+    .containerProject>h3:nth-child(1)::before {
+        left: -96px;
+        top: -21px;
+    }
+
+    .containerProject>h3:nth-child(2)::before {
+        left: -92px;
+        top: -19px;
+    }
+
+    .containerProject>h3:nth-child(3)::before {
+        left: -94px;
+        top: -22px;
+    }
+
+    .containerProject>h3:nth-child(4)::before {
+        left: -91px;
+        top: -21px;
+    }
+
+}
+
+
+
+@media screen and (max-width: 900px) {
 
     /* .cursor,
     .cursor2 {
@@ -816,7 +884,7 @@ button:focus:not(:focus-visible) {
     }
 
     .containerProject {
-        line-height: 80px;
+        line-height: 149px;
         font-size: 17.5vw;
         padding-bottom: 50px;
     }
@@ -855,7 +923,7 @@ button:focus:not(:focus-visible) {
     .containerProject>h3:nth-child(2)::after,
     .containerProject>h3:nth-child(3)::after,
     .containerProject>h3:nth-child(4)::after {
-        left: -19px;
+        left: -41px;
         top: 0px;
     }
 
@@ -1036,5 +1104,17 @@ button:focus:not(:focus-visible) {
 
     .containerContact>h4 {
         font-size: 21vw;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .containerProject {
+        line-height: 149px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .containerProject {
+        line-height: 94px;
     }
 }
