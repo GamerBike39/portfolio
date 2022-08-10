@@ -184,18 +184,18 @@ contactBtn.addEventListener("click", function () {
 });
 
 // *****caroussele******
-const caroussele = () => {
-  let slider = tns({
-    container: ".my-slider",
-    items: 1,
-    speed: 10,
-    controlsText: [" <", "> "],
-    controlsPosition: "center",
-    loop: true,
-    swipeAngle: false,
-    mouseDrag: false,
-  });
-}
+// const caroussele = () => {
+//   let slider = tns({
+//     container: ".my-slider",
+//     items: 1,
+//     speed: 10,
+//     controlsText: [" <", "> "],
+//     controlsPosition: "center",
+//     loop: true,
+//     swipeAngle: false,
+//     mouseDrag: false,
+//   });
+// }
 
 // ***** anim btn modal ****
 const modalBtnActive = () => {
