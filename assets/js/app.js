@@ -227,7 +227,10 @@ async function getProject() {
         modal.classList.add("flex");
         modal.classList.remove("displayNone");
         modalTitle.innerHTML = data[i].title;
-        modalImg.innerHTML = `<div class="my-slider">${data[i].img}</div>`;
+        modalImg.innerHTML = `<div class="swiper-wrapper">${data[i].img}</div>`;
+        const swiper = new Swiper(".modalImg", {
+          spaceBetween: 100,
+        });
         modalDesc[0].innerHTML = data[i].desc;
         modalGit.innerHTML = `<a class='learnMore' href="${data[i].github}" target='_blank'><svg
         xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'>

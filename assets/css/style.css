@@ -381,6 +381,8 @@ ul {
 
 .modalImg {
     padding: 10px;
+    width: 53vw;
+    overflow: hidden;
 }
 
 
@@ -911,6 +913,8 @@ button:focus:not(:focus-visible) {
     .tns-controls [data-controls=next] {
         top: 17%;
     }
+
+
 }
 
 
@@ -996,6 +1000,7 @@ button:focus:not(:focus-visible) {
 
     .modalImg {
         padding: 0px;
+        width: 90vw;
     }
 
     .desktopNav {
