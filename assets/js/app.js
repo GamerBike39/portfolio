@@ -227,9 +227,19 @@ async function getProject() {
         modal.classList.add("flex");
         modal.classList.remove("displayNone");
         modalTitle.innerHTML = data[i].title;
-        modalImg.innerHTML = `<div class="swiper-wrapper">${data[i].img}</div>`;
+        modalImg.innerHTML = `<div class="swiper-wrapper">${data[i].img}</div> <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div><div class="swiper-pagination swiper-pagination-progressbar"></div>`;
         const swiper = new Swiper(".modalImg", {
           spaceBetween: 100,
+          effect: "fade",
+          pagination: {
+            el: ".swiper-pagination",
+            type: "progressbar",
+          },
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
         });
         modalDesc[0].innerHTML = data[i].desc;
         modalGit.innerHTML = `<a class='learnMore' href="${data[i].github}" target='_blank'><svg
