@@ -300,8 +300,14 @@ ul {
 }
 
 .contact {
+    gap: 47px;
+}
+
+div.contact:nth-child(1)>ul:nth-child(1) {
+    display: flex;
     gap: 20px;
 }
+
 
 /* ********* gestion de la modale******** */
 .modal {
@@ -565,45 +571,6 @@ ul {
 }
 
 
-/* custom Cursor */
-/* .cursor {
-    width: 50px;
-    height: 50px;
-    border-radius: 100%;
-    border: 2px dashed rgb(238, 10, 10);
-    transition: all 200ms ease-out;
-    position: fixed;
-    pointer-events: none;
-    left: 0;
-    top: 0;
-    transform: translate(calc(-50% + 15px), -50%);
-    z-index: 5;
-}
-
-.cursor2 {
-    width: 20px;
-    height: 20px;
-    border-radius: 100%;
-    background-color: #fa9e2d;
-    opacity: .2;
-    position: fixed;
-    transform: translate(-50%, -50%);
-    pointer-events: none;
-    transition: width .3s, height .3s, opacity .3s;
-    z-index: 5;
-} */
-
-/* .hover {
-    background-color: rgb(11, 55, 247);
-    opacity: 0.5;
-}
-
-.cursorinnerhover {
-    width: 50px;
-    height: 50px;
-    opacity: .5;
-} */
-
 /* contact formulaire */
 .containerContact {
     display: flex;
@@ -777,8 +744,29 @@ button:focus:not(:focus-visible) {
     margin-right: auto;
 }
 
+input {
+    padding: 20px 5px;
+}
 
+textarea {
+    padding: 8px 5px;
 
+}
+
+.message {
+    transform: translateY(-25px);
+}
+
+input::placeholder,
+textarea::placeholder {
+    font-family: 'Roboto Flex', sans-serif;
+}
+
+div.form-group:nth-child(3) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 
 
@@ -867,16 +855,15 @@ button:focus:not(:focus-visible) {
 
 
 
+
+
 @media screen and (max-width: 900px) {
 
-    /* .cursor,
-    .cursor2 {
-        display: none;
-    } */
-
-    body {
-        cursor: inherit;
+    .links>ul:nth-child(1) {
+        display: flex;
+        gap: 50px;
     }
+
 
     .containerProject {
         line-height: 149px;

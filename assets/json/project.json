@@ -21,7 +21,7 @@
         "title" : "CREATIVES",
         "img" :"<img  class='swiper-slide' src='assets/img/creativeAccueil.jpg'><img class='swiper-slide' src='assets/img/creative2.jpg'><img class='swiper-slide' src='assets/img/creativeAkita.jpg'>"
              ,
-        "desc" :"<p>Projet réalisé durant ma formation Access Code School.</p><p>Allojyvé est un projet qui a comme fonction d'utilisé l'API de The Movie Database, pour faire un suivie des sorties populaires, à venir, et en cours.</p><p>La contrainte de ce projet était de ne pas utiliser d'HTML et de tout générer avec Javascript</p>",
+        "desc" :"<p>Projet réalisé durant ma formation Access Code School.</p><p>Creatives est un des premiers projets où il nous était demandé d'intégrer une maquette</p>",
         "github" :"https://github.com/GamerBike39/projet-1-creative",
         "link" : "https://gamerbike39.github.io/projet-1-creative/"
     },

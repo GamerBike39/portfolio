@@ -64,7 +64,7 @@ btnAbout.addEventListener("click", function () {
 
 
 quiBtn.addEventListener("click", function () {
-  containerQui.classList.toggle("displayNone");
+  containerQui.classList.remove("displayNone");
   // containerQui.classList.toggle("flex");
   containerSkill.classList.add("displayNone");
   containerExp.classList.add("displayNone");
@@ -75,7 +75,7 @@ quiBtn.addEventListener("click", function () {
 });
 
 skillBtn.addEventListener("click", function () {
-  containerSkill.classList.toggle("displayNone");
+  containerSkill.classList.remove("displayNone");
   // containerSkill.classList.toggle("flex");
   containerQui.classList.add("displayNone");
   containerExp.classList.add("displayNone");
@@ -86,7 +86,7 @@ skillBtn.addEventListener("click", function () {
 });
 
 expBtn.addEventListener("click", function () {
-  containerExp.classList.toggle("displayNone");
+  containerExp.classList.remove("displayNone");
   // containerExp.classList.toggle("flex");
   containerSkill.classList.add("displayNone");
   containerQui.classList.add("displayNone");
@@ -97,7 +97,7 @@ expBtn.addEventListener("click", function () {
 });
 
 btnHobbie.addEventListener("click", function () {
-  containerHobbie.classList.toggle("displayNone");
+  containerHobbie.classList.remove("displayNone");
   // containerHobbie.classList.toggle("flex");
   containerExp.classList.add("displayNone");
   containerSkill.classList.add("displayNone");
@@ -125,50 +125,6 @@ new ResizeObserver((entries) => {
   }
 }).observe(document.body);
 
-// curseur custom
-
-const cursorTuning = () => {
-  const cursor = document.querySelector(".cursor");
-  const cursorinner = document.querySelector(".cursor2");
-  const a = document.querySelectorAll("a");
-
-  document.addEventListener("mousemove", function (e) {
-    const x = e.clientX;
-    const y = e.clientY;
-    cursor.style.transform = `translate3d(calc(${e.clientX}px - 50%), calc(${
-    e.clientY
-  }px - 50%), 0) rotate(${x + y}deg)`;
-    cursor.style.animation = " animation: rotate 0.5s infinite ;";
-  });
-
-  document.addEventListener("mousemove", function (e) {
-    const x = e.clientX;
-    const y = e.clientY;
-    cursorinner.style.left = x + "px";
-    cursorinner.style.top = y + "px";
-  });
-
-  document.addEventListener("mousedown", function () {
-    cursor.classList.add("click");
-    cursorinner.classList.add("cursorinnerhover");
-  });
-
-  document.addEventListener("mouseup", function () {
-    cursor.classList.remove("click");
-    cursorinner.classList.remove("cursorinnerhover");
-  });
-
-  a.forEach((item) => {
-    item.addEventListener("mouseover", () => {
-      cursor.classList.add("hover");
-    });
-    item.addEventListener("mouseleave", () => {
-      cursor.classList.remove("hover");
-    });
-  });
-}
-// cursorTuning();
-
 // rubrique contact form
 const contactBtn = document.querySelector(".contactBtn");
 const contactForm = document.querySelector(".containerContact");
@@ -182,20 +138,6 @@ contactBtn.addEventListener("click", function () {
   })
   dekstopNavModale.classList.remove("dekstopNavModale", "scaleTranslate");
 });
-
-// *****caroussele******
-// const caroussele = () => {
-//   let slider = tns({
-//     container: ".my-slider",
-//     items: 1,
-//     speed: 10,
-//     controlsText: [" <", "> "],
-//     controlsPosition: "center",
-//     loop: true,
-//     swipeAngle: false,
-//     mouseDrag: false,
-//   });
-// }
 
 // ***** anim btn modal ****
 const modalBtnActive = () => {
